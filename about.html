@@ -5,16 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>About — FORGEDACTIVE</title>
 <meta name="description" content="A personal and community-sourced guide to GLP peptide wellness."/>
-
-<!-- OG / Social Preview -->
 <meta property="og:title" content="FORGEDACTIVE"/>
 <meta property="og:description" content="A personal and community-sourced guide to GLP peptide wellness."/>
 <meta property="og:image" content="https://forgedactive.com/og-image.jpg"/>
 <meta property="og:url" content="https://forgedactive.com"/>
 <meta property="og:type" content="website"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://forgedactive.com/og-image.jpg"/>  
-  
+<meta name="twitter:image" content="https://forgedactive.com/og-image.jpg"/>
 <link rel="stylesheet" href="/style.css"/>
 </head>
 <body>
@@ -26,40 +23,34 @@
     <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
   </div>
   <div class="nav-links" id="navLinks">
-    <button onclick="window.location.href='/'" data-page="home" >Home</button>
+    <button onclick="window.location.href='/'" data-page="home">Home</button>
     <button onclick="window.location.href='/about'" data-page="about" class="active-nav">About</button>
-    
     <div class="nav-dropdown">
-      <button class="nav-dropdown-btn " data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
+      <button class="nav-dropdown-btn" data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
       <div class="dropdown-menu">
         <div class="dropdown-label">Metabolic Series</div>
-        
         <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
         <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
       </div>
     </div>
-    
     <div class="nav-dropdown">
-      <button class="nav-dropdown-btn " data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
+      <button class="nav-dropdown-btn" data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
       <div class="dropdown-menu">
         <div class="dropdown-label">Regenerative Series</div>
-        
         <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
         <button onclick="window.location.href='/kpv'">KPV</button>
         <button onclick="window.location.href='/glutathione'">Glutathione</button>
       </div>
     </div>
-    
     <div class="nav-dropdown">
-      <button class="nav-dropdown-btn " data-series="performance">Performance <span class="arrow">▾</span></button>
+      <button class="nav-dropdown-btn" data-series="performance">Performance <span class="arrow">▾</span></button>
       <div class="dropdown-menu">
         <div class="dropdown-label">Performance Series</div>
-        
         <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
         <button onclick="window.location.href='/mots-c'">MOTS-c</button>
       </div>
     </div>
-    <button onclick="window.location.href='/journey'" data-page="journey" >Your Journey</button>
+    <button onclick="window.location.href='/journey'" data-page="journey">Your Journey</button>
   </div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -89,7 +80,8 @@
 </div>
 
 <div class="page active" id="page-about">
-<div class="peptide-hero">
+
+  <div class="peptide-hero">
     <p class="hero-eyebrow">// My Story</p>
     <h1 class="hero-title" style="font-size:clamp(3rem,10vw,8rem)"><span class="grad-text">ABOUT</span></h1>
   </div>
@@ -165,16 +157,14 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container">
     <div class="notice-box fade-in">
       <h4>Important Research and Information Notice</h4>
-      <p>All content on FORGEDACTIVE is provided strictly for general informational and educational purposes...</p>
+      <p>All content on FORGEDACTIVE is provided strictly for general informational and educational purposes. This website does not constitute medical advice, diagnosis, or treatment recommendations of any kind. The information presented, including descriptions of personal and community experience with peptide compounds, should not be used as a substitute for professional medical guidance.</p>
       <br>
-      <p>References to specific compounds are purely educational...</p>
+      <p>References to specific compounds are purely educational and reflect publicly available research. Any compounds discussed may be prescription-only, unapproved, or regulated differently depending on your jurisdiction.</p>
       <br>
-      <p>Always consult a qualified, licensed healthcare provider...</p>
+      <p>Always consult a qualified, licensed healthcare provider before beginning, modifying, or discontinuing any wellness, medication, or peptide protocol. Individual responses vary significantly. The author of this site is not a medical professional.</p>
     </div>
   </div>
 
@@ -227,25 +217,10 @@ function updateGradient(page) {
   r.style.setProperty('--c5', p[4]);
   r.style.setProperty('--c6', p[5]);
 }
-
-const pageRoutes = {
-  'home':    '/',
-  'about':   '/about',
-  'tirz':    '/tirzepatide',
-  'reta':    '/retatrutide',
-  'ghkcu':   '/ghk-cu',
-  'kpv':     '/kpv',
-  'gluta':   '/glutathione',
-  'tesa':    '/tesamorelin',
-  'motsc':   '/mots-c',
-  'journey': '/journey',
-};
-
 function showPage(id) {
-  const url = pageRoutes[id] || '/';
-  window.location.href = url;
+  const routes = {home:'/',about:'/about',tirz:'/tirzepatide',reta:'/retatrutide',ghkcu:'/ghk-cu',kpv:'/kpv',gluta:'/glutathione',tesa:'/tesamorelin',motsc:'/mots-c',journey:'/journey'};
+  window.location.href = routes[id] || '/';
 }
-
 function toggleMenu() {
   const m = document.getElementById('mobileMenu');
   const h = document.getElementById('hamburger');
@@ -283,10 +258,6 @@ function initFadeIns() {
 document.addEventListener('keydown', e => {
   if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') e.target.click();
 });
-document.addEventListener('DOMContentLoaded', () => {
-  initFadeIns();
-});
-
 document.addEventListener('DOMContentLoaded', () => {
   updateGradient('about');
   initFadeIns();
