@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Forged Peptide Guide</title>
+<meta name="description" content="A personal and community-sourced guide to GLP peptide wellness covering Tirzepatide, Retatrutide, GHK-Cu, KPV, Glutathione, Tesamorelin, and MOTS-c."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="gradient-canvas" id="gradCanvas" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo" onclick="showPage('home')" tabindex="0" role="button" aria-label="FORGEDACTIVE home">
+    <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <button onclick="showPage('home')" data-page="home" class="active-nav">Home</button>
+    <button onclick="showPage('about')" data-page="about">About</button>
+
+    <div class="nav-dropdown" id="dd-metabolic">
+      <button class="nav-dropdown-btn" data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Metabolic Series</div>
+        <button onclick="showPage('tirz')">Tirzepatide</button>
+        <button onclick="showPage('reta')">Retatrutide</button>
+      </div>
+    </div>
+
+    <div class="nav-dropdown" id="dd-regen">
+      <button class="nav-dropdown-btn" data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Regenerative Series</div>
+        <button onclick="showPage('ghkcu')">GHK-Cu</button>
+        <button onclick="showPage('kpv')">KPV</button>
+        <button onclick="showPage('gluta')">Glutathione</button>
+      </div>
+    </div>
+
+    <div class="nav-dropdown" id="dd-perf">
+      <button class="nav-dropdown-btn" data-series="performance">Performance <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Performance Series</div>
+        <button onclick="showPage('tesa')">Tesamorelin</button>
+        <button onclick="showPage('motsc')">MOTS-c</button>
+      </div>
+    </div>
+
+    <button onclick="showPage('journey')" data-page="journey">Your Journey</button>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+  <button onclick="showPage('home');closeMenu()">Home</button>
+  <button onclick="showPage('about');closeMenu()">About</button>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-metabolic',this)">Metabolic Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-metabolic">
+    <button onclick="showPage('tirz');closeMenu()">Tirzepatide</button>
+    <button onclick="showPage('reta');closeMenu()">Retatrutide</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-regen',this)">Regenerative Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-regen">
+    <button onclick="showPage('ghkcu');closeMenu()">GHK-Cu</button>
+    <button onclick="showPage('kpv');closeMenu()">KPV</button>
+    <button onclick="showPage('gluta');closeMenu()">Glutathione</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-perf',this)">Performance Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-perf">
+    <button onclick="showPage('tesa');closeMenu()">Tesamorelin</button>
+    <button onclick="showPage('motsc');closeMenu()">MOTS-c</button>
+  </div>
+  <button onclick="showPage('journey');closeMenu()">Your Journey</button>
+</div>
+
+
+<!-- ═══════════════ HOME ═══════════════ -->
+<div class="page active" id="page-home">
+  <section class="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">// Personal + Community Peptide Wellness Resource</p>
+      <h1 class="hero-title"><span class="grad-text">FORGED</span></h1>
+      <p class="hero-sub">A personal and community-sourced guide to GLP peptide wellness. Research-backed information across seven compounds, organized into three series.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="showPage('journey')">Start the Journey Guide</button>
+        <button class="btn-outline" onclick="showPage('about')">My Story</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">METABOLIC</span><span class="dot-sep">·</span>
+      Tirzepatide · Retatrutide<span class="dot-sep">·</span>
+      <span class="t-accent">REGENERATIVE</span><span class="dot-sep">·</span>
+      GHK-Cu · KPV · Glutathione<span class="dot-sep">·</span>
+      <span class="t-accent">PERFORMANCE</span><span class="dot-sep">·</span>
+      Tesamorelin · MOTS-c<span class="dot-sep">·</span>
+      <span class="t-accent">FORGEDACTIVE</span><span class="dot-sep">·</span>
+      Research. Experience. Clarity.<span class="dot-sep">·</span>
+      <span class="t-accent">METABOLIC</span><span class="dot-sep">·</span>
+      Tirzepatide · Retatrutide<span class="dot-sep">·</span>
+      <span class="t-accent">REGENERATIVE</span><span class="dot-sep">·</span>
+      GHK-Cu · KPV · Glutathione<span class="dot-sep">·</span>
+      <span class="t-accent">PERFORMANCE</span><span class="dot-sep">·</span>
+      Tesamorelin · MOTS-c<span class="dot-sep">·</span>
+      <span class="t-accent">FORGEDACTIVE</span><span class="dot-sep">·</span>
+      Research. Experience. Clarity.<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="stat-bar fade-in">
+      <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">Peptides Covered</div></div>
+      <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Series</div></div>
+      <div class="stat-item"><div class="stat-num">30+</div><div class="stat-label">Cited Studies</div></div>
+      <div class="stat-item"><div class="stat-num">SHARED</div><div class="stat-label">Experiences</div></div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Research. Experience. Clarity.</p>
+      <h2 class="section-title">What You'll Find Here</h2>
+      <p class="section-sub">Every compound on this site gets the same treatment: mechanism of action, published research with full citations, firsthand or community-sourced experience, and a detailed FAQ.</p>
+      <div class="panel-grid">
+        <div class="panel-block accent">
+          <span class="tag tag-pink">Personal Account</span>
+          <h3>Real Experience</h3>
+          <p>Some pages reflect direct personal experience. Others draw from friends, family, and the broader wellness community. Every page makes clear which is which.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-purple">Fully Cited</span>
+          <h3>Research with Sources</h3>
+          <p>Every research claim includes journal name, title, authors, PMID, year, and a direct link to the source. No floating facts without a reference.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-blue">Journey Framework</span>
+          <h3>Three Phases</h3>
+          <p>Starting Out, Ramping Up, Maintaining. A phase-by-phase guide with specific action steps and what to realistically expect at each stage.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-orange">Notice</span>
+          <h3>Informational Only</h3>
+          <p>All content here is for general informational purposes. Nothing on this site constitutes medical advice. Always consult a qualified healthcare provider before starting any protocol.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Seven Compounds, Three Categories</p>
+      <h2 class="section-title">Explore the Stack</h2>
+      <p class="section-sub">Compounds are organized by series. Every compound on this site gets the same treatment: mechanism of action, published research with full citations, firsthand or community-sourced experience, and a detailed FAQ.</p>
+      <div class="series-grid">
+        <div class="series-card">
+          <span class="tag tag-pink">Metabolic Series</span>
+          <p class="series-card-desc">GLP-based compounds targeting appetite regulation, insulin sensitivity, and body composition. The core of most GLP wellness protocols.</p>
+          <div class="pill-group">
+            <button class="pill pill-metabolic" onclick="showPage('tirz')">Tirzepatide</button>
+            <button class="pill pill-metabolic" onclick="showPage('reta')">Retatrutide</button>
+          </div>
+        </div>
+        <div class="series-card">
+          <span class="tag tag-orange">Regenerative Series</span>
+          <p class="series-card-desc">Compounds supporting tissue repair, inflammation reduction, skin health, and cellular defense. A natural complement to the metabolic changes GLP protocols produce.</p>
+          <div class="pill-group">
+            <button class="pill pill-regenerative" onclick="showPage('ghkcu')">GHK-Cu</button>
+            <button class="pill pill-regenerative" onclick="showPage('kpv')">KPV</button>
+            <button class="pill pill-regenerative" onclick="showPage('gluta')">Glutathione</button>
+          </div>
+        </div>
+        <div class="series-card">
+          <span class="tag tag-blue">Performance Series</span>
+          <p class="series-card-desc">Compounds targeting growth hormone, visceral fat, mitochondrial function, and metabolic flexibility for deeper body composition and longevity work.</p>
+          <div class="pill-group">
+            <button class="pill pill-performance" onclick="showPage('tesa')">Tesamorelin</button>
+            <button class="pill pill-performance" onclick="showPage('motsc')">MOTS-c</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <div class="cta-band">
+        <p class="section-label">// The Full Guide</p>
+        <h2 class="section-title">Know Before You Go</h2>
+        <p>The journey section walks through all three phases, from your first injection to long-term maintenance. Step by step, phase by phase.</p>
+        <div class="btns"><button class="btn-primary" onclick="showPage('journey')">Read the Journey Guide</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer-bar">
+    FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community-sourced experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.
+  </div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<div class="page" id="page-about">
+  <div class="peptide-hero">
+    <p class="hero-eyebrow">// My Story</p>
+    <h1 class="hero-title" style="font-size:clamp(3rem,10vw,8rem)"><span class="grad-text">ABOUT</span></h1>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">HEALTH FIRST</span><span class="dot-sep">·</span>
+      Read Everything<span class="dot-sep">·</span>
+      <span class="t-accent">RESEARCH</span><span class="dot-sep">·</span>
+      Live It<span class="dot-sep">·</span>
+      <span class="t-accent">COMMUNITY</span><span class="dot-sep">·</span>
+      Share Knowledge<span class="dot-sep">·</span>
+      <span class="t-accent">HEALTH FIRST</span><span class="dot-sep">·</span>
+      Read Everything<span class="dot-sep">·</span>
+      <span class="t-accent">RESEARCH</span><span class="dot-sep">·</span>
+      Live It<span class="dot-sep">·</span>
+      <span class="t-accent">COMMUNITY</span><span class="dot-sep">·</span>
+      Share Knowledge<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="big-quote fade-in">"I didn't find a resource that combined real experience with solid research, so I built one."</div>
+
+    <div class="panel-grid fade-in" style="margin-bottom:12px">
+      <div class="panel-block accent">
+        <span class="tag tag-pink">Origin</span>
+        <h3>Why This Exists</h3>
+        <p>When I started my GLP journey, I found either marketing material or dense academic papers with nothing in between. Forged Active is the middle ground: personal, honest, and grounded in science, with every research claim backed by a full citation.</p>
+        <br>
+        <p>Some compounds on this site I've used personally. Others come from close friends, family, or the broader wellness community. Every page is clear about which is which.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-purple">The Philosophy</span>
+        <h3>Forged, Not Found</h3>
+        <p>Health isn't something you stumble into. It's built deliberately, with the right information and patience. GLP peptides are tools. This site is about understanding those tools as clearly as possible.</p>
+        <br>
+        <p>"FORGEDACTIVE" reflects that ethos: your health is shaped through intentional choices, not passive luck or marketing promises.</p>
+      </div>
+    </div>
+
+    <div class="notice-box fade-in">
+      <h4>Important Research and Information Notice</h4>
+      <p>All content on FORGEDACTIVE is provided strictly for general informational and educational purposes. This website does not constitute medical advice, diagnosis, or treatment recommendations of any kind. The information presented, including descriptions of personal and community experience with peptide compounds, should not be used as a substitute for professional medical guidance.</p>
+      <br>
+      <p>FORGEDACTIVE does not sell, manufacture, distribute, or promote the use of any pharmaceutical compound, peptide, or supplement. References to specific compounds are purely educational and reflect publicly available research. Any compounds discussed may be prescription-only, unapproved, or regulated differently depending on your jurisdiction.</p>
+      <br>
+      <p>Always consult a qualified, licensed healthcare provider before beginning, modifying, or discontinuing any wellness, medication, or peptide protocol. Individual responses vary significantly. The author of this site is not a medical professional.</p>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Core Values</p>
+      <h2 class="section-title">How I Approach This</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num" style="color:var(--c1)">01</div>
+          <div class="step-content">
+            <h4>Honesty Over Hype</h4>
+            <p>The harder weeks, the side effects, the moments of uncertainty — those are part of this too. A complete picture is more useful than a polished one.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num" style="color:var(--c2)">02</div>
+          <div class="step-content">
+            <h4>Research Before Claims</h4>
+            <p>Every mechanism and benefit described on this site is tied to published science with full citations. Personal experience is labeled as such. Research is cited completely.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num" style="color:var(--c3)">03</div>
+          <div class="step-content">
+            <h4>You Decide</h4>
+            <p>The goal is to give you enough solid information to have a genuinely informed conversation with your healthcare provider, not to replace that conversation.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num" style="color:var(--c5)">04</div>
+          <div class="step-content">
+            <h4>Ongoing Updates</h4>
+            <p>Peptide research moves fast. As new studies publish or experience accumulates, this site gets updated. It's a living resource.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ TIRZEPATIDE ═══════════════ -->
+<div class="page" id="page-tirz">
+  <div class="peptide-hero">
+    <span class="tag tag-pink">Metabolic Series · GIP / GLP-1 Dual Agonist</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c1),var(--c6));-webkit-background-clip:text;background-clip:text">TIRZEPATIDE</span></h1>
+    <p class="peptide-subtitle">LY3298176</p>
+    <p class="peptide-intro">A dual-receptor agonist targeting both GIP and GLP-1 pathways. The most clinically studied compound in the modern GLP class, with landmark trial data on body weight reduction, glycemic control, and cardiovascular outcomes.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">DUAL AGONIST</span><span class="dot-sep">·</span>GIP + GLP-1<span class="dot-sep">·</span>
+      <span class="t-accent">WEEKLY INJECTION</span><span class="dot-sep">·</span>FDA Approved<span class="dot-sep">·</span>
+      <span class="t-accent">SURMOUNT</span><span class="dot-sep">·</span>Phase 3 Trial Series<span class="dot-sep">·</span>
+      <span class="t-accent">DUAL AGONIST</span><span class="dot-sep">·</span>GIP + GLP-1<span class="dot-sep">·</span>
+      <span class="t-accent">WEEKLY INJECTION</span><span class="dot-sep">·</span>FDA Approved<span class="dot-sep">·</span>
+      <span class="t-accent">SURMOUNT</span><span class="dot-sep">·</span>Phase 3 Trial Series<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Mechanism of Action</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block accent">
+        <span class="tag tag-pink">GLP-1 Receptor</span>
+        <h3>Glucagon-Like Peptide 1</h3>
+        <p>GLP-1 agonism slows gastric emptying, stimulates glucose-dependent insulin secretion, and suppresses glucagon release. The clinical result is improved blood sugar regulation, prolonged satiety, and a reduction in appetite, including the quieting of "food noise," the constant mental background chatter around eating that many people don't realize affects them until it's gone.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-yellow">GIP Receptor</span>
+        <h3>Glucose-Dependent Insulinotropic Peptide</h3>
+        <p>GIP is often called the forgotten incretin. Tirzepatide's dual GIP action enhances insulin sensitivity in adipose tissue and appears to modulate the GLP-1 side effect profile, potentially improving tolerability compared to GLP-1-only compounds. This receptor component is the molecular differentiator from semaglutide.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Science Says</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-pink"></span>SURMOUNT-1 — Phase 3 Obesity Trial</h4>
+          <p class="finding">Participants on tirzepatide 15mg achieved a mean body weight reduction of 20.9% at 72 weeks, the highest weight loss recorded in a non-surgical pharmacological obesity trial at the time of publication. Over 50% of participants on the highest dose achieved at least 20% weight loss. The placebo group lost 3.1%.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Jastreboff AM, Aronne LJ, Ahmad NN, et al.<br>
+            <span class="cite-label">Title:</span> Tirzepatide Once Weekly for the Treatment of Obesity<br>
+            <span class="cite-label">Journal:</span> New England Journal of Medicine<br>
+            <span class="cite-label">Year:</span> 2022 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 35658024<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1056/NEJMoa2206038" target="_blank" rel="noopener">10.1056/NEJMoa2206038</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-purple"></span>SURPASS-2 — Head-to-Head vs. Semaglutide</h4>
+          <p class="finding">In the only head-to-head Phase 3 trial against semaglutide 1mg, all tirzepatide doses produced significantly greater HbA1c reductions and weight loss. The 15mg dose reduced HbA1c by 2.46% versus 1.86% for semaglutide, and body weight by 11.2kg versus 5.7kg.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Frías JP, Davies MJ, Rosenstock J, et al.<br>
+            <span class="cite-label">Title:</span> Tirzepatide versus Semaglutide Once Weekly in Patients with Type 2 Diabetes<br>
+            <span class="cite-label">Journal:</span> New England Journal of Medicine<br>
+            <span class="cite-label">Year:</span> 2021 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 34170647<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1056/NEJMoa2107519" target="_blank" rel="noopener">10.1056/NEJMoa2107519</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Cardiovascular Outcomes — Class Reference</h4>
+          <p class="finding">SELECT trial data on semaglutide established significant cardiovascular event reduction for the GLP-1 class in people with obesity and established cardiovascular disease. Ongoing tirzepatide cardiovascular outcome trials are expected to build on this class-level finding.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.<br>
+            <span class="cite-label">Title:</span> Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes<br>
+            <span class="cite-label">Journal:</span> New England Journal of Medicine<br>
+            <span class="cite-label">Year:</span> 2023 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 37952131<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1056/NEJMoa2307563" target="_blank" rel="noopener">10.1056/NEJMoa2307563</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Friends and Family Experience</p>
+      <h2 class="section-title">What They Reported</h2>
+      <div class="panel-grid">
+        <div class="panel-block">
+          <span class="tag tag-pink">Weeks 1–4</span>
+          <h3>The Adjustment</h3>
+          <p>Appetite suppression was noticeable within the first week for most. Nausea was the dominant side effect early, particularly in weeks one through three. Eating smaller, protein-forward meals more frequently helped significantly. Energy was variable as overall caloric intake dropped.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-yellow">Weeks 4–12</span>
+          <h3>Finding the Rhythm</h3>
+          <p>Nausea largely resolved by week six for most people. Appetite regulation felt more natural, less like white-knuckling cravings and more like genuinely not being hungry. Visual body composition changes became apparent around weeks eight to ten.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-purple">Most Notable</span>
+          <h3>The Food Noise Effect</h3>
+          <p>The most consistently reported surprise was the quieting of "food noise," the constant mental background chatter about eating. Many people don't realize how much cognitive bandwidth this occupies until it's gone. This is one of the most frequently described quality-of-life improvements across the GLP class.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-orange">Watchpoints</span>
+          <h3>What to Monitor</h3>
+          <p>Protein intake needs active attention since overall food volume drops significantly. Hydration is critical and frequently underestimated. Working with a provider to monitor lipase, amylase, and liver enzymes on longer protocols is worth doing.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">Tirzepatide FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the difference between tirzepatide and retatrutide?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Tirzepatide targets two receptors: GIP and GLP-1. Retatrutide targets three: GIP, GLP-1, and glucagon. The addition of glucagon receptor agonism in retatrutide increases resting energy expenditure and enhances fat mobilization, which is why Phase 2 data showed greater weight reduction with retatrutide. However, tirzepatide is FDA approved with a much larger clinical safety dataset. Retatrutide is still in Phase 3 trials. Both have their place depending on goals, health profile, and what a provider recommends.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What doses is tirzepatide available in?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Tirzepatide is available in 2.5mg, 5mg, 7.5mg, 10mg, 12.5mg, and 15mg doses. Most protocols start at 2.5mg weekly and titrate up every four weeks based on tolerability. The maximum approved dose is 15mg weekly. Always follow the titration schedule from your prescribing provider.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What are the most common side effects?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Gastrointestinal side effects are the most common: nausea, vomiting, diarrhea, and constipation, particularly during dose escalation. These typically improve two to four weeks after stabilizing at a given dose. Slowing the titration schedule is the most effective management strategy. Rare but serious risks include pancreatitis and thyroid C-cell effects observed in rodent models.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do I need to change my diet while on tirzepatide?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Appetite is significantly reduced, so every meal becomes more nutritionally important. Prioritize protein-dense, nutrient-rich foods. Avoid high-fat, greasy meals as they tend to worsen nausea. Staying well hydrated is critical and more commonly overlooked than most people expect.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What happens when I stop taking tirzepatide?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Most people experience some weight regain after stopping since the appetite-regulating effects are tied to the compound being active. Research consistently shows that sustained use or a maintenance-dose protocol outperforms cycling on and off. Building durable lifestyle habits during the protocol is the best long-term strategy.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ RETATRUTIDE ═══════════════ -->
+<div class="page" id="page-reta">
+  <div class="peptide-hero">
+    <span class="tag tag-purple">Metabolic Series · GIP / GLP-1 / Glucagon Triple Agonist</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c2),var(--c3));-webkit-background-clip:text;background-clip:text">RETATRUTIDE</span></h1>
+    <p class="peptide-subtitle">LY3437943 · Triple Agonist</p>
+    <p class="peptide-intro">The next frontier in GLP research. Retatrutide adds glucagon receptor agonism to the dual GIP/GLP-1 profile, creating a triple-action compound with Phase 2 data showing over 24% body weight reduction at 48 weeks, surpassing any previously published pharmacological trial.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">TRIPLE AGONIST</span><span class="dot-sep">·</span>GIP + GLP-1 + Glucagon<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 3</span><span class="dot-sep">·</span>Clinical Trials Underway<span class="dot-sep">·</span>
+      <span class="t-accent">24%+</span><span class="dot-sep">·</span>Phase 2 Weight Reduction<span class="dot-sep">·</span>
+      <span class="t-accent">TRIPLE AGONIST</span><span class="dot-sep">·</span>GIP + GLP-1 + Glucagon<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 3</span><span class="dot-sep">·</span>Clinical Trials Underway<span class="dot-sep">·</span>
+      <span class="t-accent">24%+</span><span class="dot-sep">·</span>Phase 2 Weight Reduction<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Triple Action Explained</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block">
+        <span class="tag tag-purple">GLP-1</span>
+        <h3>Appetite and Insulin</h3>
+        <p>Same GLP-1 receptor activity as other compounds in this class: appetite suppression, slowed gastric emptying, and glucose-dependent insulin release. The foundation of the effect profile.</p>
+      </div>
+      <div class="panel-block accent">
+        <span class="tag tag-yellow">GIP</span>
+        <h3>Insulin Sensitivity</h3>
+        <p>GIP agonism improves insulin sensitivity in adipose tissue and enhances metabolic flexibility, the ability to efficiently switch between fat and carbohydrate oxidation depending on activity and availability.</p>
+      </div>
+      <div class="panel-block accent">
+        <span class="tag tag-orange">Glucagon</span>
+        <h3>The Third Axis</h3>
+        <p>Glucagon receptor agonism is the key differentiator. It promotes lipolysis and increases resting energy expenditure. In isolation, glucagon raises blood sugar. Paired with GLP-1 agonism, the glucose-raising effect is blunted while the fat-burning and thermogenic effects remain. This is the mechanism behind the superior body composition data.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-blue">Synergy</span>
+        <h3>Why Three Receptors</h3>
+        <p>GLP-1 manages appetite and insulin. GIP manages insulin sensitivity. Glucagon manages energy expenditure. Together they address metabolic dysregulation from three angles at once, which is why the Phase 2 outcomes exceeded what any dual agonist had previously achieved.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Data Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-purple"></span>Phase 2 Trial — Primary Outcomes</h4>
+          <p class="finding">The Phase 2 trial published in NEJM showed up to 24.2% mean body weight reduction at 48 weeks in participants receiving retatrutide 12mg weekly, the highest weight reduction ever reported in a pharmacological trial at the time. The placebo group lost 2.1%. The dose-response curve remained strong at the highest dose, suggesting the efficacy ceiling has not been reached.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Jastreboff AM, Kaplan LM, Frías JP, et al.<br>
+            <span class="cite-label">Title:</span> Triple-Hormone-Receptor Agonist Retatrutide for Obesity — A Phase 2 Trial<br>
+            <span class="cite-label">Journal:</span> New England Journal of Medicine<br>
+            <span class="cite-label">Year:</span> 2023 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 37366315<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1056/NEJMoa2301972" target="_blank" rel="noopener">10.1056/NEJMoa2301972</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-orange"></span>Liver Fat Reduction</h4>
+          <p class="finding">Phase 2 participants showed significant reductions in hepatic fat content, relevant for the estimated 25 to 30% of adults with non-alcoholic fatty liver disease. The glucagon receptor component is believed to drive much of this benefit through direct glucagon receptor signaling in hepatocytes, which promotes fatty acid oxidation and reduces triglyceride synthesis in the liver.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Jastreboff AM, Kaplan LM, Frías JP, et al.<br>
+            <span class="cite-label">Title:</span> Triple-Hormone-Receptor Agonist Retatrutide for Obesity — A Phase 2 Trial<br>
+            <span class="cite-label">Journal:</span> New England Journal of Medicine<br>
+            <span class="cite-label">Year:</span> 2023 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 37366315<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1056/NEJMoa2301972" target="_blank" rel="noopener">10.1056/NEJMoa2301972</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Glucagon and Energy Expenditure — Mechanistic Basis</h4>
+          <p class="finding">The preclinical foundation for using glucagon co-agonism alongside GLP-1 was established in a landmark 2009 Nature Chemical Biology paper showing that dual GLP-1/glucagon co-agonism eliminated obesity in rodents by combining appetite suppression with elevated energy expenditure. Retatrutide extends this to a triple-hormone approach in humans.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Day JW, Ottaway N, Patterson JT, et al.<br>
+            <span class="cite-label">Title:</span> A new glucagon and GLP-1 co-agonist eliminates obesity in rodents<br>
+            <span class="cite-label">Journal:</span> Nature Chemical Biology<br>
+            <span class="cite-label">Year:</span> 2009 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 19935657<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1038/nchembio.209" target="_blank" rel="noopener">10.1038/nchembio.209</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Personal Experience</p>
+      <h2 class="section-title">My Experience</h2>
+      <div class="panel-grid">
+        <div class="panel-block">
+          <span class="tag tag-purple">Weeks 1–2</span>
+          <h3>Getting Acclimated</h3>
+          <p>The first couple of weeks felt like my body was adjusting to a new set of rules. The sensation I noticed most was a heaviness or fullness in my stomach, almost like a brick, because my brain and habits were still calibrated to eating a certain amount but my digestion simply could not handle that volume anymore. It was a clear mismatch between old habits and new biology.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-purple">Weeks 3–8</span>
+          <h3>Settling In</h3>
+          <p>The stomach heaviness eased as eating habits began to realign with the new signals. Bloating and general inflammation that I had noticed early on started to subside after the first month. Appetite suppression was consistent and the food noise effect became apparent. Body composition changes were noticeable by weeks six to eight.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-orange">Months 3–4</span>
+          <h3>Managing Allodynia</h3>
+          <p>Around the third and fourth month I developed allodynia, a skin sensitivity where normal sensations like clothing or light touch feel like a healing sunburn without the pain. After researching this side effect and finding it was a known phenomenon in the community, I moved to split dosing, dividing the weekly dose across two smaller injections. This helped significantly and was only done when the side effects were genuinely unmanageable since weekly dosing was otherwise convenient.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-blue">Overall</span>
+          <h3>What Stood Out</h3>
+          <p>The thermogenic quality was distinct from anything in the tirzepatide experience reports I had heard from friends and family. A perceptible increase in resting warmth and energy. The body composition changes, particularly in areas that tend to be stubborn, were more pronounced. It is a more physiologically intense compound and that intensity is real.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">Retatrutide FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the difference between retatrutide and tirzepatide?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Tirzepatide targets two receptors: GIP and GLP-1. Retatrutide adds a third: the glucagon receptor. That addition increases resting energy expenditure and enhances fat mobilization beyond what dual agonism achieves. Phase 2 data showed 24.2% mean weight reduction for retatrutide versus 20.9% for tirzepatide in their respective trials. That said, tirzepatide is FDA approved with a much larger safety dataset. Retatrutide is still in Phase 3. These are not interchangeable compounds and the decision between them should involve a healthcare provider.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is retatrutide FDA approved?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">As of this writing, retatrutide is not FDA approved. It is in Phase 3 clinical trials. Understanding the regulatory status of any compound you are considering is an important first step.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is allodynia and does retatrutide cause it?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Allodynia is a condition where normally non-painful stimuli, like clothing contact or light touch, produce an uncomfortable hypersensitive sensation. It has been reported by some retatrutide users, often described as a skin sensitivity resembling a healing sunburn without actual pain. It is not universal. Split dosing, dividing the weekly amount into two smaller injections across the week, is a strategy some users find reduces this effect. Always discuss any significant side effects with your provider.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What should I monitor while on retatrutide?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Heart rate is the most important additional metric beyond standard GLP monitoring. The glucagon component produces mild sympathomimetic effects and Phase 2 documented average resting heart rate increases of four to five beats per minute. Blood pressure, cardiovascular symptoms, lipase, amylase, and liver enzymes should all be tracked with your provider.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What does triple agonist mean in practical terms?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">You eat less via GLP-1, your body uses insulin more efficiently via GIP, and your resting metabolic rate increases via glucagon. The combination produces body composition results that are qualitatively different from single or dual agonists, particularly noticeable in visceral fat reduction and overall energy expenditure at rest.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ GHK-CU ═══════════════ -->
+<div class="page" id="page-ghkcu">
+  <div class="peptide-hero">
+    <span class="tag tag-orange">Regenerative Series · Copper Binding Tripeptide</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c5),var(--c6));-webkit-background-clip:text;background-clip:text">GHK-CU</span></h1>
+    <p class="peptide-subtitle">Glycyl-L-Histidyl-L-Lysine · Copper Complex</p>
+    <p class="peptide-intro">A naturally occurring copper-binding tripeptide found in human plasma, saliva, and urine, with concentrations that decline with age. Documented for regenerative properties across skin, collagen synthesis, wound healing, anti-inflammatory signaling, and hair follicle stimulation.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">COPPER PEPTIDE</span><span class="dot-sep">·</span>Anti-Aging<span class="dot-sep">·</span>
+      <span class="t-accent">COLLAGEN</span><span class="dot-sep">·</span>Synthesis<span class="dot-sep">·</span>
+      <span class="t-accent">WOUND HEALING</span><span class="dot-sep">·</span>Regeneration<span class="dot-sep">·</span>
+      <span class="t-accent">4000+ GENES</span><span class="dot-sep">·</span>Modulated<span class="dot-sep">·</span>
+      <span class="t-accent">COPPER PEPTIDE</span><span class="dot-sep">·</span>Anti-Aging<span class="dot-sep">·</span>
+      <span class="t-accent">COLLAGEN</span><span class="dot-sep">·</span>Synthesis<span class="dot-sep">·</span>
+      <span class="t-accent">WOUND HEALING</span><span class="dot-sep">·</span>Regeneration<span class="dot-sep">·</span>
+      <span class="t-accent">4000+ GENES</span><span class="dot-sep">·</span>Modulated<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Mechanism of Action</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block accent">
+        <span class="tag tag-orange">Copper Chaperone</span>
+        <h3>Targeted Copper Delivery</h3>
+        <p>GHK-Cu binds copper ions and facilitates their targeted delivery to cells and tissues. Copper is essential for collagen cross-linking, elastin formation, superoxide dismutase activity, and numerous enzymatic processes. GHK-Cu functions as a precision delivery vehicle getting copper to where it is needed.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-yellow">Epigenetic Effects</span>
+        <h3>Broad Gene Regulation</h3>
+        <p>Research by Pickart and colleagues identified GHK-Cu as a broad gene regulator, modulating expression of over 4,000 human genes including those governing inflammation, DNA repair, antioxidant response, metabolism, and tissue remodeling. This positions it well beyond a simple topical cosmetic agent.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Science Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-orange"></span>Skin, Collagen, and Dermal Repair</h4>
+          <p class="finding">Multiple clinical and in vitro studies demonstrate GHK-Cu increases collagen synthesis, stimulates fibroblast proliferation, improves skin firmness and elasticity, and reduces fine lines. Measurable improvements in dermal thickness and barrier function have been documented. These effects are particularly relevant during GLP-related weight loss which can affect skin laxity.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Pickart L, Vasquez-Soltero JM, Margolina A<br>
+            <span class="cite-label">Title:</span> GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration<br>
+            <span class="cite-label">Journal:</span> BioMed Research International<br>
+            <span class="cite-label">Year:</span> 2015 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 26090436<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1155/2015/648108" target="_blank" rel="noopener">10.1155/2015/648108</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-pink"></span>Wound Healing and Tissue Repair</h4>
+          <p class="finding">GHK-Cu promotes wound healing by stimulating fibroblast proliferation, angiogenesis, and anti-inflammatory signaling. It shifts injured tissue toward organized regeneration rather than scar formation through modulation of TGF-beta signaling pathways, reducing the fibrotic response while supporting structural tissue repair.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Pickart L<br>
+            <span class="cite-label">Title:</span> The Human Tri-Peptide GHK and Tissue Remodeling<br>
+            <span class="cite-label">Journal:</span> Journal of Biomaterials Science, Polymer Edition<br>
+            <span class="cite-label">Year:</span> 2008 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 18454942<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1163/156856208784909435" target="_blank" rel="noopener">10.1163/156856208784909435</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Gene Expression and Anti-Inflammatory Modulation</h4>
+          <p class="finding">Analysis found significant downregulation of inflammatory pathways including TNF-alpha, NF-kB targets, and multiple interleukins alongside upregulation of genes related to DNA repair, antioxidant response, and mitochondrial function, suggesting a broad pro-longevity signaling effect extending well beyond topical applications.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Pickart L, Vasquez-Soltero JM, Margolina A<br>
+            <span class="cite-label">Title:</span> The Human Tripeptide GHK-Cu in Prevention of Oxidative Stress and Degenerative Conditions of Aging<br>
+            <span class="cite-label">Journal:</span> Oxidative Medicine and Cellular Longevity<br>
+            <span class="cite-label">Year:</span> 2012 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 22928086<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1155/2012/324832" target="_blank" rel="noopener">10.1155/2012/324832</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Personal Experience</p>
+      <h2 class="section-title">My Experience</h2>
+      <div class="panel-grid">
+        <div class="panel-block">
+          <span class="tag tag-orange">Reasoning</span>
+          <h3>Why It Was Added</h3>
+          <p>GLP-driven weight loss changes body composition rapidly. Skin, hair, and connective tissue do not always keep pace with that speed of change. GHK-Cu was added to support skin quality, collagen synthesis, and to help address mild systemic inflammation that accompanied aggressive metabolic change.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-yellow">What I Noticed</span>
+          <h3>Slow and Steady</h3>
+          <p>Skin texture improved noticeably over eight to twelve weeks, particularly firmness. Workout recovery felt faster. Hair quality improved. These are subtle, compounding effects. GHK-Cu rewards patience and consistent use. It is not a compound where results arrive in the first few weeks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">GHK-Cu FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is GHK-Cu administered?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">GHK-Cu can be used topically via creams or serums, subcutaneously via injection for systemic effects, or intranasally. Route of administration affects which effects are most prominent. Topical primarily benefits skin. Subcutaneous administration reaches systemic circulation for broader regenerative and anti-inflammatory effects.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can GHK-Cu be used alongside the metabolic compounds?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">They operate on entirely different receptor systems and pathways with no known interactions. The combination is complementary: GLP compounds drive metabolic change while GHK-Cu supports tissue quality, skin integrity, and recovery during that transformation. This pairing logic is the core reason they are used together in this protocol.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long does GHK-Cu take to show results?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Topical effects on skin can appear in four to eight weeks with consistent use. Systemic effects from subcutaneous administration typically take eight to twelve or more weeks, as collagen remodeling and gene regulation changes occur on biological timescales rather than days.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Does copper toxicity apply to GHK-Cu?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Copper toxicity is theoretically possible with excessive supplementation, but GHK-Cu research doses are far below toxic thresholds. The peptide is specifically designed to transport copper in a controlled, bioavailable manner rather than releasing free ionic copper into circulation. Standard research dosing has not been associated with copper toxicity in published literature.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ KPV ═══════════════ -->
+<div class="page" id="page-kpv">
+  <div class="peptide-hero">
+    <span class="tag tag-green">Regenerative Series · Anti-Inflammatory Tripeptide</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c4),var(--c3));-webkit-background-clip:text;background-clip:text">KPV</span></h1>
+    <p class="peptide-subtitle">Lysine-Proline-Valine · Alpha-MSH Fragment</p>
+    <p class="peptide-intro">A tripeptide derived from the C-terminus of alpha-melanocyte stimulating hormone, known primarily for its potent anti-inflammatory properties. Research covers inflammatory bowel conditions, skin inflammation, wound healing, and systemic inflammation reduction, making it particularly relevant for conditions driven by chronic inflammatory signaling.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">KPV</span><span class="dot-sep">·</span>Alpha-MSH Fragment<span class="dot-sep">·</span>
+      <span class="t-accent">ANTI-INFLAMMATORY</span><span class="dot-sep">·</span>Gut Health<span class="dot-sep">·</span>
+      <span class="t-accent">SKIN</span><span class="dot-sep">·</span>Eczema · Wound Healing<span class="dot-sep">·</span>
+      <span class="t-accent">KPV</span><span class="dot-sep">·</span>Alpha-MSH Fragment<span class="dot-sep">·</span>
+      <span class="t-accent">ANTI-INFLAMMATORY</span><span class="dot-sep">·</span>Gut Health<span class="dot-sep">·</span>
+      <span class="t-accent">SKIN</span><span class="dot-sep">·</span>Eczema · Wound Healing<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Mechanism of Action</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block accent">
+        <span class="tag tag-green">MC1R Agonism</span>
+        <h3>Melanocortin Pathway</h3>
+        <p>KPV is derived from the C-terminal sequence of alpha-MSH and exerts its anti-inflammatory effects primarily through the melanocortin-1 receptor (MC1R). This pathway downregulates NF-kB signaling, one of the central drivers of inflammatory cascades throughout the body, including in gut epithelium and skin.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-blue">Gut and Skin</span>
+        <h3>Where It Acts</h3>
+        <p>KPV shows particular activity in gut epithelial tissue, making it relevant to inflammatory bowel conditions, and in skin, where it modulates keratinocyte and immune cell inflammatory signaling. Its small tripeptide structure allows it to penetrate tissues effectively and act at the site of inflammation directly.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Science Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-green"></span>Gut Inflammation and Colitis</h4>
+          <p class="finding">Studies in murine colitis models found KPV significantly reduced inflammatory markers including TNF-alpha, IL-6, and NF-kB activity in gut epithelial tissue. Oral administration showed bioactivity, and the peptide demonstrated protective effects on the intestinal mucosal barrier during inflammatory challenge.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Dalmasso G, Charrier-Hisamuddin L, Nguyen HT, et al.<br>
+            <span class="cite-label">Title:</span> PepT1-mediated tripeptide KPV uptake reduces intestinal inflammation<br>
+            <span class="cite-label">Journal:</span> Gastroenterology<br>
+            <span class="cite-label">Year:</span> 2008 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 18082524<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1053/j.gastro.2007.10.026" target="_blank" rel="noopener">10.1053/j.gastro.2007.10.026</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Skin Inflammation and Wound Healing</h4>
+          <p class="finding">KPV has been studied for its ability to reduce skin inflammation and accelerate wound healing. Topical application reduced inflammatory cytokine expression in skin models and promoted organized healing responses. Its MC1R-mediated activity in keratinocytes makes it a candidate for inflammatory skin conditions including eczema and psoriasis.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Brzoska T, Luger TA, Maaser C, et al.<br>
+            <span class="cite-label">Title:</span> Alpha-melanocyte-stimulating hormone and related tripeptides: biochemistry, antiinflammatory and protective effects in vitro and in vivo, and future perspectives for the treatment of immune-mediated inflammatory diseases<br>
+            <span class="cite-label">Journal:</span> Endocrine Reviews<br>
+            <span class="cite-label">Year:</span> 2008 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 18349283<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1210/er.2007-0027" target="_blank" rel="noopener">10.1210/er.2007-0027</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Personal and Community Experience</p>
+      <h2 class="section-title">Experience</h2>
+      <div class="panel-grid">
+        <div class="panel-block accent">
+          <span class="tag tag-green">Personal</span>
+          <h3>Eczema and Inflammation</h3>
+          <p>KPV was added specifically to address skin inflammation from eczema. The results were noticeable. Flare frequency decreased, the intensity of existing flares was reduced, and overall skin inflammation became more manageable over several weeks of consistent use. It did not eliminate eczema entirely but meaningfully changed how the skin responded to triggers.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-blue">Community Reported</span>
+          <h3>What Others Report</h3>
+          <p>The wellness and biohacking community most commonly reports KPV benefits around gut inflammation, including reduced bloating, improved digestive comfort, and symptom reduction in those with inflammatory bowel conditions. Skin-related improvements mirror the personal experience above, with eczema, rosacea, and general skin irritation being frequently cited use cases.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">KPV FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is KPV typically used?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">KPV can be taken orally in capsule form, administered subcutaneously, or applied topically. Oral use is common for gut-related applications since the PepT1 transporter in gut epithelium actively transports the tripeptide. Subcutaneous use is more common for systemic anti-inflammatory effects. Topical for skin conditions.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is KPV safe for long-term use?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">KPV is a small naturally derived peptide with a favorable safety profile in research to date. Long-term human data is limited compared to more established compounds. As with any research peptide, quality sourcing and appropriate dosing are important, and use should be discussed with a healthcare provider.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How quickly does KPV work for inflammation?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Some users report noticeable improvements in gut comfort and skin inflammation within one to two weeks. More significant changes typically build over four to eight weeks. The timeline varies based on the severity of the underlying condition and route of administration.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can KPV be combined with GHK-Cu or glutathione?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">These compounds work through different mechanisms and there are no known adverse interactions between them. Many people in the regenerative wellness space use KPV, GHK-Cu, and glutathione together as they address complementary aspects of cellular health: inflammation, tissue repair, and oxidative defense respectively.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ GLUTATHIONE ═══════════════ -->
+<div class="page" id="page-gluta">
+  <div class="peptide-hero">
+    <span class="tag tag-green">Regenerative Series · Master Antioxidant</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c4),var(--c6));-webkit-background-clip:text;background-clip:text">GLUTATHIONE</span></h1>
+    <p class="peptide-subtitle">GSH · Gamma-L-Glutamyl-L-Cysteinyl-Glycine</p>
+    <p class="peptide-intro">The body's most abundant endogenous antioxidant, present in virtually every cell. Glutathione is central to oxidative stress defense, detoxification, immune function, and cellular repair. Levels decline with age, illness, and high metabolic demand, making supplementation a common component of longevity and recovery protocols.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">MASTER ANTIOXIDANT</span><span class="dot-sep">·</span>Oxidative Defense<span class="dot-sep">·</span>
+      <span class="t-accent">DETOXIFICATION</span><span class="dot-sep">·</span>Liver Support<span class="dot-sep">·</span>
+      <span class="t-accent">IMMUNE FUNCTION</span><span class="dot-sep">·</span>Cellular Repair<span class="dot-sep">·</span>
+      <span class="t-accent">MASTER ANTIOXIDANT</span><span class="dot-sep">·</span>Oxidative Defense<span class="dot-sep">·</span>
+      <span class="t-accent">DETOXIFICATION</span><span class="dot-sep">·</span>Liver Support<span class="dot-sep">·</span>
+      <span class="t-accent">IMMUNE FUNCTION</span><span class="dot-sep">·</span>Cellular Repair<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Mechanism of Action</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block accent">
+        <span class="tag tag-green">Antioxidant Defense</span>
+        <h3>Neutralizing Free Radicals</h3>
+        <p>Glutathione neutralizes reactive oxygen species (ROS) by donating electrons through its thiol group, converting harmful free radicals into stable compounds. It also regenerates other antioxidants including vitamins C and E after they have been oxidized, acting as the recycling hub of the body's antioxidant network.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-yellow">Detoxification</span>
+        <h3>Phase II Liver Conjugation</h3>
+        <p>In the liver, glutathione conjugates with toxins, heavy metals, and metabolic byproducts to make them water-soluble and excretable. This Phase II detoxification role makes glutathione levels directly relevant to how effectively the body processes and eliminates harmful compounds, including those generated during rapid fat metabolism on GLP protocols.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Science Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-green"></span>Oxidative Stress and Aging</h4>
+          <p class="finding">Research consistently documents declining glutathione levels with age and their correlation with increased oxidative stress markers, reduced immune function, and higher susceptibility to chronic disease. Supplementation studies show measurable increases in plasma and cellular glutathione levels with sustained administration, particularly via liposomal or injectable routes.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Sekhar RV, Patel SG, Guthikonda AP, et al.<br>
+            <span class="cite-label">Title:</span> Deficient synthesis of glutathione underlies oxidative stress in aging and can be corrected by dietary cysteine and glycine supplementation<br>
+            <span class="cite-label">Journal:</span> American Journal of Clinical Nutrition<br>
+            <span class="cite-label">Year:</span> 2011 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 21795440<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.3945/ajcn.110.003483" target="_blank" rel="noopener">10.3945/ajcn.110.003483</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Immune Function and Cellular Defense</h4>
+          <p class="finding">Glutathione plays a direct role in lymphocyte proliferation, natural killer cell activity, and cytokine production. Studies show that lymphocytes with higher intracellular glutathione levels mount stronger immune responses. Depletion impairs the ability of immune cells to respond to pathogens and inflammatory signals.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Hamilos DL, Wedner HJ<br>
+            <span class="cite-label">Title:</span> The role of glutathione in lymphocyte activation. I. Comparison of inhibitory effects of buthionine sulfoximine and 2-cyclohexene-1-one by nuclear size transformation<br>
+            <span class="cite-label">Journal:</span> Journal of Immunology<br>
+            <span class="cite-label">Year:</span> 1985 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 3871577<br>
+            <span class="cite-label">DOI:</span> <a href="https://pubmed.ncbi.nlm.nih.gov/3871577/" target="_blank" rel="noopener">pubmed.ncbi.nlm.nih.gov/3871577</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Community Experience</p>
+      <h2 class="section-title">What Users Report</h2>
+      <div class="panel-grid">
+        <div class="panel-block">
+          <span class="tag tag-blue">Community Reported</span>
+          <h3>Common Reports</h3>
+          <p>The wellness community most frequently reports improved energy levels, clearer skin tone, faster recovery from exercise and illness, and a general sense of reduced physical fatigue. Skin brightening and evening of skin tone are among the most visually apparent effects reported, particularly with IV or injectable glutathione.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-green">In GLP Context</span>
+          <h3>Why It Pairs Well</h3>
+          <p>Rapid fat mobilization during GLP protocols releases stored toxins and increases metabolic demand on the liver. Maintaining adequate glutathione levels during this period supports the liver's ability to process and clear those compounds efficiently. It is a physiologically sensible addition to an active metabolic protocol.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">Glutathione FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the best way to take glutathione?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Oral glutathione has historically poor bioavailability as the tripeptide is largely broken down in the GI tract. Liposomal glutathione significantly improves absorption. IV and subcutaneous administration provide the highest and most direct bioavailability. NAC (N-acetylcysteine) is a well-studied oral precursor that supports the body's own glutathione synthesis.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is glutathione safe?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Glutathione is an endogenous molecule with a well-established safety profile at standard doses. It is naturally present in the body and dietary sources. At very high supplemental doses, there is theoretical concern about disrupting the oxidative balance the body uses for immune signaling. Standard wellness dosing is generally considered safe.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Does glutathione affect skin appearance?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Skin brightening and tone improvements are among the most consistently reported community effects, particularly with IV or injectable use. The mechanism is partly related to glutathione's role in melanin synthesis pathways and partly to its antioxidant effects on skin cell health. These effects are dose and route dependent.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ TESAMORELIN ═══════════════ -->
+<div class="page" id="page-tesa">
+  <div class="peptide-hero">
+    <span class="tag tag-blue">Performance Series · GHRH Analogue</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c3),var(--c2));-webkit-background-clip:text;background-clip:text">TESAMORELIN</span></h1>
+    <p class="peptide-subtitle">TH9507 · GHRH Analogue · FDA Approved</p>
+    <p class="peptide-intro">A synthetic analogue of growth hormone releasing hormone (GHRH) that stimulates the pituitary to produce growth hormone in natural pulses. FDA approved for HIV-associated lipodystrophy, tesamorelin is used in wellness contexts for visceral fat reduction, muscle fullness and retention, and improvements in hair and nail quality associated with optimized growth hormone levels.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">GHRH ANALOGUE</span><span class="dot-sep">·</span>GH Secretagogue<span class="dot-sep">·</span>
+      <span class="t-accent">VISCERAL FAT</span><span class="dot-sep">·</span>Reduction<span class="dot-sep">·</span>
+      <span class="t-accent">MUSCLE FULLNESS</span><span class="dot-sep">·</span>Retention<span class="dot-sep">·</span>
+      <span class="t-accent">FDA APPROVED</span><span class="dot-sep">·</span>Lipodystrophy<span class="dot-sep">·</span>
+      <span class="t-accent">GHRH ANALOGUE</span><span class="dot-sep">·</span>GH Secretagogue<span class="dot-sep">·</span>
+      <span class="t-accent">VISCERAL FAT</span><span class="dot-sep">·</span>Reduction<span class="dot-sep">·</span>
+      <span class="t-accent">MUSCLE FULLNESS</span><span class="dot-sep">·</span>Retention<span class="dot-sep">·</span>
+      <span class="t-accent">FDA APPROVED</span><span class="dot-sep">·</span>Lipodystrophy<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Mechanism of Action</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block accent">
+        <span class="tag tag-blue">GHRH Receptor</span>
+        <h3>Pulsatile GH Stimulation</h3>
+        <p>Tesamorelin binds to GHRH receptors on the pituitary gland and stimulates the natural pulsatile release of growth hormone. Unlike direct GH administration, tesamorelin preserves the physiological feedback loop, meaning the body's own regulatory mechanisms remain intact and GH is released in natural pulses rather than a constant stream.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-purple">IGF-1 Pathway</span>
+        <h3>Downstream Effects</h3>
+        <p>Increased GH pulses stimulate IGF-1 production in the liver, which mediates most of the anabolic and lipolytic effects attributed to growth hormone: visceral fat mobilization, muscle protein synthesis, collagen production, and improved body composition. IGF-1 levels are the primary biomarker tracked during tesamorelin protocols.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Science Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Visceral Fat Reduction — Primary Trial Data</h4>
+          <p class="finding">Phase 3 trials in HIV-associated lipodystrophy showed tesamorelin reduced visceral adipose tissue (VAT) by approximately 15 to 18% over 26 weeks compared to placebo. Trunk fat reduction and improved waist-to-hip ratio were significant findings. These results established tesamorelin as the first FDA-approved pharmacological treatment for visceral fat accumulation.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Falutz J, Mamputu JC, Potvin D, et al.<br>
+            <span class="cite-label">Title:</span> Effects of Tesamorelin (TH9507), a Growth Hormone-Releasing Factor Analog, in HIV-Infected Patients with Excess Abdominal Fat<br>
+            <span class="cite-label">Journal:</span> Annals of Internal Medicine<br>
+            <span class="cite-label">Year:</span> 2010 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 20439575<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.7326/0003-4819-152-7-201004060-00005" target="_blank" rel="noopener">10.7326/0003-4819-152-7-201004060-00005</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-purple"></span>Muscle Retention and Body Composition</h4>
+          <p class="finding">Tesamorelin trials showed preservation and modest improvement in lean mass alongside fat reduction, consistent with GH's known role in promoting muscle protein synthesis via IGF-1. This body recomposition effect, simultaneous fat loss and lean mass support, distinguishes it from pure caloric restriction approaches.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Falutz J, Allas S, Blot K, et al.<br>
+            <span class="cite-label">Title:</span> Metabolic effects of a growth hormone-releasing factor in patients with HIV<br>
+            <span class="cite-label">Journal:</span> New England Journal of Medicine<br>
+            <span class="cite-label">Year:</span> 2007 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 17978290<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1056/NEJMoa072362" target="_blank" rel="noopener">10.1056/NEJMoa072362</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-green"></span>Cognitive Function</h4>
+          <p class="finding">A randomized controlled trial found tesamorelin improved verbal memory and executive function in older adults with mild cognitive impairment, attributed to IGF-1's neuroprotective and neuroplasticity effects in the hippocampus. This is an emerging area of interest for the compound beyond its metabolic applications.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Baker LD, Cholerton BA, Craft S, et al.<br>
+            <span class="cite-label">Title:</span> Effects of growth hormone-releasing hormone on cognitive function in adults with mild cognitive impairment and healthy older adults<br>
+            <span class="cite-label">Journal:</span> JAMA Neurology<br>
+            <span class="cite-label">Year:</span> 2012 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 23419552<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1001/jamaneurol.2013.1518" target="_blank" rel="noopener">10.1001/jamaneurol.2013.1518</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Community Experience</p>
+      <h2 class="section-title">What Users Report</h2>
+      <div class="panel-grid">
+        <div class="panel-block">
+          <span class="tag tag-blue">Body Composition</span>
+          <h3>Visceral Fat and Muscle</h3>
+          <p>The most consistently reported community observation is noticeable reduction in abdominal visceral fat, the deeper fat layer surrounding organs, over eight to sixteen weeks. This is often described as a flattening effect distinct from subcutaneous fat loss. Simultaneously, users report improved muscle fullness and a more defined appearance even without significant changes in training volume.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-purple">Hair and Nails</span>
+          <h3>Quality Improvements</h3>
+          <p>Hair and nail quality improvements are a commonly reported secondary effect, attributed to elevated IGF-1 and its role in keratin synthesis and follicle activity. Users describe faster nail growth, improved nail strength, and increased hair thickness and growth rate, typically noticeable after eight to twelve weeks of consistent use.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-green">Sleep and Recovery</span>
+          <h3>GH Pulse Benefits</h3>
+          <p>Because tesamorelin enhances natural GH pulsatility, users frequently report improved sleep quality, particularly deeper slow-wave sleep when GH is naturally secreted most abundantly. Faster physical recovery and reduced next-day soreness after training are also commonly described.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-orange">Watchpoints</span>
+          <h3>What to Monitor</h3>
+          <p>IGF-1 levels should be monitored regularly as the primary efficacy and safety biomarker. Fasting glucose and insulin sensitivity warrant attention since GH can have transient effects on glucose metabolism. Water retention and mild joint discomfort are sometimes reported early in a protocol and typically resolve.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">Tesamorelin FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How does tesamorelin differ from direct growth hormone?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Tesamorelin stimulates the pituitary to produce GH naturally and in physiological pulses, preserving the feedback loop. Direct GH administration bypasses this regulation entirely and shuts down the pituitary's own production. Tesamorelin's approach is generally considered safer for long-term use and avoids the desensitization and side effect profile associated with exogenous GH at higher doses.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long does it take to see results?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Most community reports place visible visceral fat changes at eight to sixteen weeks with consistent daily subcutaneous dosing. Hair and nail improvements typically appear at eight to twelve weeks. IGF-1 levels measurably rise within the first two to four weeks, which is why early bloodwork is useful for confirming the compound is working as expected.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Does tesamorelin affect blood sugar?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Growth hormone has well-documented transient effects on insulin sensitivity. Tesamorelin can cause mild increases in fasting glucose, particularly early in a protocol. Monitoring fasting glucose and HbA1c is recommended. People with pre-existing insulin resistance or diabetes should approach this compound with particular provider oversight.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can tesamorelin be combined with the metabolic series compounds?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">The mechanisms operate through different pathways and there are no known direct pharmacological conflicts. In practice, combining a GLP compound for appetite and metabolic regulation with tesamorelin for GH pulse optimization and visceral fat targeting is a logical pairing for body recomposition goals. Provider supervision is important when running multiple protocols simultaneously.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ MOTS-C ═══════════════ -->
+<div class="page" id="page-motsc">
+  <div class="peptide-hero">
+    <span class="tag tag-blue">Performance Series · Mitochondrial Peptide</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c3),var(--c4));-webkit-background-clip:text;background-clip:text">MOTS-C</span></h1>
+    <p class="peptide-subtitle">Mitochondrial ORF of the 12S rRNA Type-C</p>
+    <p class="peptide-intro">A mitochondria-derived peptide encoded within the 12S rRNA gene of the mitochondrial genome. MOTS-c regulates metabolic homeostasis, improves insulin sensitivity, enhances exercise capacity, and promotes metabolic flexibility. Often described as an exercise mimetic, it activates many of the same cellular pathways that physical training does.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">MOTS-C</span><span class="dot-sep">·</span>Mitochondrial Peptide<span class="dot-sep">·</span>
+      <span class="t-accent">EXERCISE MIMETIC</span><span class="dot-sep">·</span>AMPK Activation<span class="dot-sep">·</span>
+      <span class="t-accent">METABOLIC FLEXIBILITY</span><span class="dot-sep">·</span>Insulin Sensitivity<span class="dot-sep">·</span>
+      <span class="t-accent">MOTS-C</span><span class="dot-sep">·</span>Mitochondrial Peptide<span class="dot-sep">·</span>
+      <span class="t-accent">EXERCISE MIMETIC</span><span class="dot-sep">·</span>AMPK Activation<span class="dot-sep">·</span>
+      <span class="t-accent">METABOLIC FLEXIBILITY</span><span class="dot-sep">·</span>Insulin Sensitivity<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Mechanism of Action</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block accent">
+        <span class="tag tag-blue">AMPK Activation</span>
+        <h3>Cellular Energy Sensor</h3>
+        <p>MOTS-c activates AMPK, the cell's master energy-sensing enzyme. AMPK activation mimics the metabolic effects of exercise and caloric restriction: increased fatty acid oxidation, improved glucose uptake in muscle, suppressed fat synthesis, and enhanced mitochondrial biogenesis. This is the core mechanism behind MOTS-c's exercise mimetic properties.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-green">Mitochondrial Origin</span>
+        <h3>A Different Kind of Peptide</h3>
+        <p>Unlike most peptides which are encoded in the nuclear genome, MOTS-c is encoded within mitochondrial DNA itself. This makes it a direct messenger of mitochondrial status to the rest of the cell. Its levels naturally decline with age, and the decline correlates with reduced metabolic flexibility and exercise capacity observed in aging populations.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Science Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Discovery and Metabolic Regulation</h4>
+          <p class="finding">The landmark 2015 Cell Metabolism paper by Lee and colleagues first identified MOTS-c as a mitochondria-derived peptide that regulates insulin sensitivity and metabolic homeostasis. In mice, MOTS-c injection prevented and reversed diet-induced obesity and insulin resistance, established skeletal muscle as a primary target tissue, and demonstrated AMPK-dependent effects on glucose metabolism.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Lee C, Zeng J, Drew BG, et al.<br>
+            <span class="cite-label">Title:</span> The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance<br>
+            <span class="cite-label">Journal:</span> Cell Metabolism<br>
+            <span class="cite-label">Year:</span> 2015 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 25738459<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1016/j.cmet.2015.01.021" target="_blank" rel="noopener">10.1016/j.cmet.2015.01.021</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-green"></span>Exercise Capacity and Physical Performance</h4>
+          <p class="finding">A 2022 study showed that MOTS-c improved physical performance in aging mice, increasing muscle strength, endurance, and coordination to levels comparable to younger animals. The mechanism involved AMPK-driven mitochondrial biogenesis and improved skeletal muscle energy metabolism, supporting its characterization as an exercise-capacity enhancing compound.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Reynolds JC, Lai RW, Woodhead JST, et al.<br>
+            <span class="cite-label">Title:</span> MOTS-c is an exercise-induced mitochondrial-encoded regulator of age-dependent physical decline and muscle homeostasis<br>
+            <span class="cite-label">Journal:</span> Nature Communications<br>
+            <span class="cite-label">Year:</span> 2021 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 34385430<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1038/s41467-021-24406-7" target="_blank" rel="noopener">10.1038/s41467-021-24406-7</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-purple"></span>Longevity and Aging</h4>
+          <p class="finding">Studies in centenarians and aging populations found that circulating MOTS-c levels are positively associated with healthspan and longevity markers. Older adults with higher MOTS-c levels showed better metabolic profiles and lower inflammatory burden. This positions MOTS-c as a potential longevity biomarker and therapeutic target for age-related metabolic decline.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Zempo H, Kim SJ, Fuku N, et al.<br>
+            <span class="cite-label">Title:</span> A pro-diabetogenic mtDNA polymorphism in the mitochondrial-derived peptide, MOTS-c<br>
+            <span class="cite-label">Journal:</span> Aging (Albany NY)<br>
+            <span class="cite-label">Year:</span> 2021 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 33714954<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.18632/aging.202944" target="_blank" rel="noopener">10.18632/aging.202944</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Community Experience</p>
+      <h2 class="section-title">What Users Report</h2>
+      <div class="panel-grid">
+        <div class="panel-block">
+          <span class="tag tag-blue">Energy and Endurance</span>
+          <h3>Most Reported Effect</h3>
+          <p>The most consistently described community experience is a noticeable improvement in sustained energy and exercise endurance, particularly during aerobic or longer-duration activity. Users describe a reduction in fatigue at effort levels that previously felt taxing, consistent with the AMPK-driven mitochondrial efficiency improvements seen in research.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-green">Insulin Sensitivity</span>
+          <h3>Metabolic Improvements</h3>
+          <p>Improved fasting glucose, reduced post-meal blood sugar spikes, and a general sense of more stable energy throughout the day are frequently described, particularly in users who track metabolic markers with continuous glucose monitors. These align directly with the AMPK and glucose uptake mechanisms established in research.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">MOTS-c FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Why is MOTS-c called an exercise mimetic?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Because it activates AMPK and downstream pathways that overlap significantly with what physical exercise triggers: fat oxidation, glucose uptake in muscle, mitochondrial biogenesis, and improved metabolic efficiency. It does not replace exercise but augments and amplifies many of the same cellular signals that make exercise beneficial.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is MOTS-c administered?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">MOTS-c is administered subcutaneously. There is no established oral bioavailability for this peptide given its size and structure. Dosing protocols vary widely in the community and there is no FDA-approved standard dose. Working with a provider experienced in peptide protocols is important for establishing an appropriate approach.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Does MOTS-c work better with exercise?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Almost certainly yes. MOTS-c activates many of the same pathways that exercise activates, and the combination appears synergistic rather than redundant. Research shows endogenous MOTS-c levels rise during exercise naturally, suggesting the two signals reinforce each other. Using MOTS-c alongside a consistent training regimen is likely to produce better outcomes than either alone.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How does MOTS-c pair with the metabolic series compounds?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">The pairing is complementary. GLP compounds reduce appetite and regulate insulin through receptor-level signaling. MOTS-c works at the mitochondrial and AMPK level to improve the efficiency of how cells use energy. Together they address metabolic health from the top down via appetite and insulin regulation and from the bottom up via cellular energy metabolism. Different mechanisms, additive benefit.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ JOURNEY ═══════════════ -->
+<div class="page" id="page-journey">
+  <div class="peptide-hero">
+    <p class="hero-eyebrow">// Your GLP Path</p>
+    <h1 class="hero-title" style="font-size:clamp(3rem,10vw,8rem)"><span class="grad-text">JOURNEY</span></h1>
+    <p class="peptide-intro">Three phases. This framework comes from personal experience and research, not a medical protocol. Your path will differ, but this arc reflects what most people encounter on a GLP wellness protocol.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">PHASE 1</span><span class="dot-sep">·</span>Starting Out<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 2</span><span class="dot-sep">·</span>Ramping Up<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 3</span><span class="dot-sep">·</span>Maintaining<span class="dot-sep">·</span>
+      Trust the Process<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 1</span><span class="dot-sep">·</span>Starting Out<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 2</span><span class="dot-sep">·</span>Ramping Up<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 3</span><span class="dot-sep">·</span>Maintaining<span class="dot-sep">·</span>
+      Trust the Process<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="journey-phase fade-in">
+      <p class="phase-label" style="color:var(--c1)">// Phase One</p>
+      <h2 class="phase-title"><span style="background:linear-gradient(135deg,var(--c1),var(--c5));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">STARTING<br>OUT</span></h2>
+      <span class="tag tag-pink">Weeks 1–6 · Lowest Dose · Adjustment</span>
+      <br><br>
+      <div class="panel-grid" style="margin-bottom:20px">
+        <div class="panel-block accent">
+          <h3>What's Happening</h3>
+          <p>Your body is encountering GLP receptor agonism for the first time. Appetite suppression is often dramatic and immediate. GI side effects are most prominent in this phase as the digestive system adapts to slowed gastric emptying. The goal here is tolerability and building a sustainable routine, not pushing for faster results.</p>
+        </div>
+        <div class="panel-block">
+          <h3>What to Expect</h3>
+          <ul class="checklist">
+            <li>Significant appetite reduction, often from the first week</li>
+            <li>Nausea, particularly in weeks one through three</li>
+            <li>Fatigue as caloric intake drops</li>
+            <li>Possible constipation or loose stools</li>
+            <li>Weight changes visible within two to four weeks</li>
+            <li>The quieting of food noise, less mental chatter around eating</li>
+          </ul>
+        </div>
+      </div>
+      <p class="section-label">// Action Steps</p>
+      <div class="steps">
+        <div class="step"><div class="step-num" style="color:var(--c1)">01</div><div class="step-content"><h4>Prioritize Protein From Day One</h4><p>Because you will eat less total food, every meal needs to be protein-anchored. Target 0.8 to 1 gram per pound of body weight. Protein shakes are a practical tool when appetite is low. Muscle loss during rapid weight loss is real and protein is the primary defense against it.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c1)">02</div><div class="step-content"><h4>Hydrate Intentionally</h4><p>Reduced appetite usually means reduced fluid intake too. Target two to three liters of water daily. Add electrolytes if dizziness or fatigue appear, particularly sodium and potassium, which drop alongside reduced food intake.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c1)">03</div><div class="step-content"><h4>Do Not Rush Titration</h4><p>The temptation to escalate dose quickly is strong when results appear. Resist it. Four weeks at each dose level before moving up is a reasonable minimum. Adaptation at each level is what makes the next level tolerable.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c1)">04</div><div class="step-content"><h4>Build Your Injection Routine</h4><p>Same day and time each week. Rotate injection sites systematically. Keep a simple log. Consistent administration produces consistent blood levels and more predictable effects.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c1)">05</div><div class="step-content"><h4>Get Baseline Bloodwork</h4><p>Comprehensive metabolic panel, lipid panel, CBC, HbA1c, thyroid panel before or early in the protocol. This baseline is what you compare against later. Without it there is no reference point for understanding what has changed.</p></div></div>
+      </div>
+    </div>
+
+    <div class="journey-phase fade-in">
+      <p class="phase-label" style="color:var(--c2)">// Phase Two</p>
+      <h2 class="phase-title"><span style="background:linear-gradient(135deg,var(--c2),var(--c3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">RAMPING<br>UP</span></h2>
+      <span class="tag tag-purple">Weeks 6–20 · Dose Escalation · Active Change</span>
+      <br><br>
+      <div class="panel-grid" style="margin-bottom:20px">
+        <div class="panel-block">
+          <h3>What's Happening</h3>
+          <p>You have established baseline tolerability and are incrementally escalating toward your target dose. Body composition changes are most dramatic in this phase. Mental effects also become clearer: reduced food obsession, improved relationship with hunger signals, and often improved mood and energy as metabolic markers shift.</p>
+        </div>
+        <div class="panel-block accent">
+          <h3>What to Expect</h3>
+          <ul class="checklist">
+            <li>Accelerating fat loss as dose increases</li>
+            <li>Brief GI side effect recurrence after each dose escalation</li>
+            <li>Visible body composition changes by weeks eight to twelve</li>
+            <li>Improved fasting glucose and more stable energy throughout the day</li>
+            <li>Plateau periods that are normal and expected</li>
+            <li>Increasing motivation as results become tangible</li>
+          </ul>
+        </div>
+      </div>
+      <p class="section-label">// Action Steps</p>
+      <div class="steps">
+        <div class="step"><div class="step-num" style="color:var(--c2)">01</div><div class="step-content"><h4>Commit to Resistance Training</h4><p>GLP compounds preserve muscle better when paired with a resistance training stimulus. Three intentional sessions per week of compound movements is a meaningful minimum for protecting lean mass during aggressive fat loss.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c2)">02</div><div class="step-content"><h4>Track Meaningfully</h4><p>Weekly weigh-ins are fine. Daily is noise. Monthly progress photos, body measurements, and how your clothes fit provide more useful signal than the scale alone, particularly if muscle is being added while fat is lost.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c2)">03</div><div class="step-content"><h4>Optimize Food Quality</h4><p>You are eating less, so what you eat matters more. Dense vegetables, lean proteins, complex carbohydrates. Ultra-processed foods tend to worsen GI side effects and provide poor satiety per calorie.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c2)">04</div><div class="step-content"><h4>Mid-Protocol Bloodwork</h4><p>Around weeks ten to twelve, repeat your key labs. Look for changes in the lipid panel, HbA1c, and liver enzymes. Share results with your provider and adjust accordingly.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c2)">05</div><div class="step-content"><h4>Manage Plateaus with Patience</h4><p>Weight loss plateaus are physiology, not failure. Before escalating dose, reassess protein intake, check for caloric drift, and increase daily movement. Give each dose level at least four to six weeks before calling a plateau.</p></div></div>
+      </div>
+    </div>
+
+    <div class="journey-phase fade-in" style="border-bottom:none">
+      <p class="phase-label" style="color:var(--c5)">// Phase Three</p>
+      <h2 class="phase-title"><span style="background:linear-gradient(135deg,var(--c5),var(--c6));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">MAINTAINING</span></h2>
+      <span class="tag tag-orange">Ongoing · Maintenance Dose · Long-Term</span>
+      <br><br>
+      <div class="panel-grid" style="margin-bottom:20px">
+        <div class="panel-block accent">
+          <h3>What's Happening</h3>
+          <p>You have reached your target outcomes and the goal shifts from change to preservation. This is often the hardest phase psychologically. The dramatic results of Phase 2 slow, and the work becomes about protecting what has been built.</p>
+          <br><p>Maintenance dosing is typically lower than peak and is highly individual. Some people stay on indefinitely at low doses; others cycle off with intentional planning.</p>
+        </div>
+        <div class="panel-block">
+          <h3>What to Expect</h3>
+          <ul class="checklist">
+            <li>Stabilized weight with slower, more gradual changes</li>
+            <li>Finding your minimum effective maintenance dose</li>
+            <li>Sustained appetite control at lower doses</li>
+            <li>Side effects minimal or absent at maintenance levels</li>
+            <li>Some weight return if stopping, which is physiologically normal</li>
+            <li>Long-term metabolic improvements consolidating</li>
+          </ul>
+        </div>
+      </div>
+      <p class="section-label">// Action Steps</p>
+      <div class="steps">
+        <div class="step"><div class="step-num" style="color:var(--c5)">01</div><div class="step-content"><h4>Find Your Minimum Effective Dose</h4><p>Work with your provider to slowly taper and identify the lowest dose that sustains your outcomes. This reduces cost, side effects, and long-term tolerance concerns.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c5)">02</div><div class="step-content"><h4>Build Lifestyle Infrastructure</h4><p>Long-term success depends on whether your habits become self-sustaining. The compound manages appetite, but the cooking habits, training routine, and sleep hygiene need to become automatic. Build them while momentum is high.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c5)">03</div><div class="step-content"><h4>Annual Bloodwork Reviews</h4><p>Annual comprehensive labs including metabolic panel, lipids, thyroid, and liver enzymes give the full picture of how your body is responding over time. Keep records. Trends matter as much as any single result.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c5)">04</div><div class="step-content"><h4>Have an Off-Protocol Plan</h4><p>If you plan to stop, do it with intention. Tapering slowly, having solid nutrition and training plans in place, and managing expectations about appetite returning are all important. Stopping abruptly without a lifestyle foundation is the most common pathway to full weight regain.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c5)">05</div><div class="step-content"><h4>Acknowledge What You Have Built</h4><p>Metabolic improvements, rebuilt habits, and a changed relationship with food are not trivial outcomes. GLP protocols done with intention fundamentally reshape baseline metabolic health. Maintenance is not just protecting weight; it is protecting an entire rebuilt metabolic identity.</p></div></div>
+      </div>
+
+      <div class="cta-band fade-in" style="margin-top:2rem">
+        <p class="section-label">// Explore the Compounds</p>
+        <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,3rem)">Read the Series</h2>
+        <p>Now that you understand the journey, explore each compound with full research citations, experience, and FAQ.</p>
+        <div class="btns">
+          <button class="btn-primary" onclick="showPage('tirz')">Tirzepatide</button>
+          <button class="btn-outline" onclick="showPage('reta')">Retatrutide</button>
+          <button class="btn-outline" onclick="showPage('ghkcu')">GHK-Cu</button>
+          <button class="btn-outline" onclick="showPage('kpv')">KPV</button>
+          <button class="btn-outline" onclick="showPage('tesa')">Tesamorelin</button>
+          <button class="btn-outline" onclick="showPage('motsc')">MOTS-c</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer-bar" style="margin-top:2rem">
+      FOR INFORMATIONAL PURPOSES ONLY. This journey framework is based on personal experience and publicly available research. It is not a medical protocol. Always work with a licensed healthcare provider. Individual experiences vary significantly.
+    </div>
+  </div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+    </div>
+    <div class="footer-nav">
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('about')">About</button>
+      <button onclick="showPage('tirz')">Tirzepatide</button>
+      <button onclick="showPage('reta')">Retatrutide</button>
+      <button onclick="showPage('ghkcu')">GHK-Cu</button>
+      <button onclick="showPage('kpv')">KPV</button>
+      <button onclick="showPage('gluta')">Glutathione</button>
+      <button onclick="showPage('tesa')">Tesamorelin</button>
+      <button onclick="showPage('motsc')">MOTS-c</button>
+      <button onclick="showPage('journey')">Your Journey</button>
+    </div>
+    <div class="footer-copy">© 2025 FORGEDACTIVE · FOR INFORMATIONAL USE ONLY</div>
+  </div>
+</footer>
+
+<script>
+const palettes = {
+  home:    ['#f472b6','#a78bfa','#60a5fa','#34d399','#fb923c','#facc15'],
+  about:   ['#a78bfa','#818cf8','#60a5fa','#7dd3fc','#c084fc','#facc15'],
+  tirz:    ['#f472b6','#fb923c','#facc15','#f9a8d4','#fbbf24','#f472b6'],
+  reta:    ['#a78bfa','#60a5fa','#34d399','#818cf8','#38bdf8','#a78bfa'],
+  ghkcu:   ['#fb923c','#facc15','#fbbf24','#f97316','#fde68a','#fb923c'],
+  kpv:     ['#34d399','#6ee7b7','#a7f3d0','#059669','#10b981','#34d399'],
+  gluta:   ['#60a5fa','#93c5fd','#a78bfa','#3b82f6','#818cf8','#60a5fa'],
+  tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
+  motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
+  journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
+};
+
+function updateGradient(page) {
+  const p = palettes[page] || palettes.home;
+  const r = document.documentElement;
+  r.style.setProperty('--c1', p[0]);
+  r.style.setProperty('--c2', p[1]);
+  r.style.setProperty('--c3', p[2]);
+  r.style.setProperty('--c4', p[3]);
+  r.style.setProperty('--c5', p[4]);
+  r.style.setProperty('--c6', p[5]);
+}
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('[data-page]').forEach(b => {
+    b.classList.toggle('active-nav', b.dataset.page === id);
+  });
+  document.querySelectorAll('.nav-dropdown-btn').forEach(b => {
+    const series = b.dataset.series;
+    const seriesPages = { metabolic: ['tirz','reta'], regenerative: ['ghkcu','kpv','gluta'], performance: ['tesa','motsc'] };
+    b.classList.toggle('active-nav', seriesPages[series] && seriesPages[series].includes(id));
+  });
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  updateGradient(id);
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    initFadeIns();
+  }));
+}
+
+// ── NO TITLE FITTING NEEDED - handled by CSS ──
+
+function toggleMobileSeries(id, btn) {
+  const el = document.getElementById(id);
+  const isOpen = el.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+}
+
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  const h = document.getElementById('hamburger');
+  const open = m.classList.toggle('open');
+  h.setAttribute('aria-expanded', open);
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').setAttribute('aria-expanded','false');
+}
+
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+function initFadeIns() {
+  const els = document.querySelectorAll('.page.active .fade-in:not(.visible)');
+  if (!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  els.forEach(el => obs.observe(el));
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') e.target.click();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateGradient('home');
+  initFadeIns();
+});
+window.addEventListener('resize', () => {});
+</script>
+</body>
+</html>
