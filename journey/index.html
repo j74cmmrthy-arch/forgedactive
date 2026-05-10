@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://forgedactive.com/og-image.jpg"/>
   
-<link rel="stylesheet" href="/style.css"/>
+<link rel="stylesheet" href="../style.css"/>
 </head>
 <body>
 
@@ -57,6 +57,7 @@
         
         <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
         <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+        <button onclick="window.location.href='/5-amino-1mq'">5-Amino-1MQ</button>
       </div>
     </div>
     <button onclick="window.location.href='/journey'" data-page="journey" class="active-nav">Your Journey</button>
@@ -84,6 +85,7 @@
   <div class="mobile-series-children" id="mob-perf">
     <button onclick="window.location.href='/tesamorelin';closeMenu()">Tesamorelin</button>
     <button onclick="window.location.href='/mots-c';closeMenu()">MOTS-c</button>
+    <button onclick="window.location.href='/5-amino-1mq';closeMenu()">5-Amino-1MQ</button>
   </div>
   <button onclick="window.location.href='/journey';closeMenu()">Your Journey</button>
 </div>
@@ -220,10 +222,7 @@
       </div>
     </div>
 
-    <div class="container"><div class="disclaimer-bar" style="margin-top:2rem">
-      FOR INFORMATIONAL PURPOSES ONLY. This journey framework is based on personal experience and publicly available research. It is not a medical protocol. Always work with a licensed healthcare provider. Individual experiences vary significantly.
-    </div>
-  </div>
+  <div class="disclaimer-bar" style="margin-top:0">FOR INFORMATIONAL PURPOSES ONLY. This journey framework is based on personal experience and publicly available research. It is not a medical protocol. Always work with a licensed healthcare provider. Individual experiences vary significantly.</div>
   <div style="height:48px"></div>
 </div>
 </div>
@@ -244,6 +243,7 @@
       <button onclick="window.location.href='/glutathione'">Glutathione</button>
       <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
       <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      <button onclick="window.location.href='/5-amino-1mq'">5-Amino-1MQ</button>
       <button onclick="window.location.href='/journey'">Your Journey</button>
     </div>
     <div class="footer-copy">© 2025 FORGEDACTIVE · FOR INFORMATIONAL USE ONLY</div>
@@ -262,6 +262,7 @@ const palettes = {
   tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
   motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
   journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
+  amino:   ['#34d399','#facc15','#60a5fa','#10b981','#a78bfa','#34d399'],
 };
 function updateGradient(page) {
   const p = palettes[page] || palettes.home;

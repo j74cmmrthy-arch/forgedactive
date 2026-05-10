@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MOTS-c — FORGEDACTIVE</title>
+<meta name="description" content="A personal and community-sourced guide to GLP peptide wellness."/>
+<meta property="og:title" content="FORGEDACTIVE"/>
+<meta property="og:description" content="A personal and community-sourced guide to GLP peptide wellness."/>
+<meta property="og:image" content="https://forgedactive.com/og-image.jpg"/>
+<meta property="og:url" content="https://forgedactive.com/mots-c"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://forgedactive.com/og-image.jpg"/>
+<link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<div class="gradient-canvas" id="gradCanvas" aria-hidden="true"></div>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo" onclick="window.location.href='/'" tabindex="0" role="button" aria-label="FORGEDACTIVE home">
+    <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <button onclick="window.location.href='/'" data-page="home">Home</button>
+    <button onclick="window.location.href='/about'" data-page="about" class="active-nav">About</button>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn" data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Metabolic Series</div>
+        <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+        <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn" data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Regenerative Series</div>
+        <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+        <button onclick="window.location.href='/kpv'">KPV</button>
+        <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn" data-series="performance">Performance <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Performance Series</div>
+        <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+        <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+        <button onclick="window.location.href='/5-amino-1mq'">5-Amino-1MQ</button>
+      </div>
+    </div>
+    <button onclick="window.location.href='/journey'" data-page="journey">Your Journey</button>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+  <button onclick="window.location.href='/';closeMenu()">Home</button>
+  <button onclick="window.location.href='/about';closeMenu()">About</button>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-metabolic',this)">Metabolic Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-metabolic">
+    <button onclick="window.location.href='/tirzepatide';closeMenu()">Tirzepatide</button>
+    <button onclick="window.location.href='/retatrutide';closeMenu()">Retatrutide</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-regen',this)">Regenerative Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-regen">
+    <button onclick="window.location.href='/ghk-cu';closeMenu()">GHK-Cu</button>
+    <button onclick="window.location.href='/kpv';closeMenu()">KPV</button>
+    <button onclick="window.location.href='/glutathione';closeMenu()">Glutathione</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-perf',this)">Performance Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-perf">
+    <button onclick="window.location.href='/tesamorelin';closeMenu()">Tesamorelin</button>
+    <button onclick="window.location.href='/mots-c';closeMenu()">MOTS-c</button>
+    <button onclick="window.location.href='/5-amino-1mq';closeMenu()">5-Amino-1MQ</button>
+  </div>
+  <button onclick="window.location.href='/journey';closeMenu()">Your Journey</button>
+</div>
+<div class="page active" id="page-motsc">
+
+  <div class="peptide-hero">
+    <div class="breadcrumb"><button onclick="window.location.href='/'">Home</button> <span>/</span> Performance Series <span>/</span> MOTS-c</div>
+    <span class="tag tag-green">Performance Series · Mitochondrial Peptide</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c4),var(--c3));-webkit-background-clip:text;background-clip:text">MOTS-C</span></h1>
+    <p class="peptide-subtitle">Mitochondrial Open Reading Frame · 16S rRNA</p>
+    <p class="peptide-intro">MOTS-c is a mitochondrial-derived peptide (a small protein produced by the DNA inside mitochondria — the energy-producing structures in your cells). It regulates metabolic flexibility, meaning the body's ability to switch efficiently between burning fat and carbohydrates depending on activity level and energy availability. It has been called a "mitochondrial hormone" and is considered one of the most exciting emerging compounds in longevity and metabolic research.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true"><div class="ticker">
+    <span class="t-accent">PERFORMANCE SERIES</span><span class="dot-sep">·</span>Mitochondrial Peptide<span class="dot-sep">·</span>Metabolic Flexibility<span class="dot-sep">·</span>Exercise Mimetic<span class="dot-sep">·</span>Longevity Research<span class="dot-sep">·</span>
+    <span class="t-accent">PERFORMANCE SERIES</span><span class="dot-sep">·</span>Mitochondrial Peptide<span class="dot-sep">·</span>Metabolic Flexibility<span class="dot-sep">·</span>Exercise Mimetic<span class="dot-sep">·</span>Longevity Research<span class="dot-sep">·</span>
+  </div></div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Mechanism of Action</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block accent">
+        <span class="tag tag-green">AMPK Activation</span>
+        <h3>The Energy Sensor Pathway</h3>
+        <p>MOTS-c activates AMPK (AMP-activated protein kinase) — often described as the cell's master energy sensor. When AMPK is activated, cells increase glucose uptake, enhance fat oxidation (burning of fat for fuel), and improve mitochondrial biogenesis (the creation of new mitochondria). This is the same pathway activated by exercise, caloric restriction, and metformin (a common diabetes medication), which is why MOTS-c is sometimes called an "exercise mimetic."</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-blue">Folate Cycle Regulation</span>
+        <h3>Metabolic Flexibility</h3>
+        <p>MOTS-c also regulates the folate-methionine cycle — a metabolic pathway involved in how cells process one-carbon units for DNA synthesis, methylation (a chemical process that controls gene expression), and amino acid metabolism. Disruption of this cycle is associated with metabolic disease and aging. MOTS-c's regulation of this pathway contributes to its broad effects on cellular metabolism and longevity-related processes.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Science Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-green"></span>Discovery and Metabolic Effects</h4>
+          <p class="finding">The original discovery paper identified MOTS-c as a regulator of insulin sensitivity and metabolic homeostasis (maintaining stable metabolic balance). In mouse models, MOTS-c administration improved insulin sensitivity, reduced obesity, and increased exercise capacity — effects that were comparable to regular aerobic exercise training.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Lee C, Zeng J, Drew BG, et al.<br>
+            <span class="cite-label">Title:</span> The Mitochondrial-Derived Peptide MOTS-c Promotes Metabolic Homeostasis and Reduces Obesity and Insulin Resistance<br>
+            <span class="cite-label">Journal:</span> Cell Metabolism<br>
+            <span class="cite-label">Year:</span> 2015 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 25738459<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1016/j.cmet.2015.02.003" target="_blank" rel="noopener">10.1016/j.cmet.2015.02.003</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Exercise Performance and Muscle</h4>
+          <p class="finding">Research has shown MOTS-c levels rise in skeletal muscle (the muscle attached to your skeleton that you control voluntarily) during exercise and decline with aging. Exogenous (externally administered) MOTS-c improved physical performance and muscle endurance in aged mice, suggesting a role in combating age-related decline in exercise capacity and muscle function.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Reynolds JC, Bhatt DL, Kim SJ, et al.<br>
+            <span class="cite-label">Title:</span> MOTS-c is an exercise-induced mitochondrial encoded regulator of age-dependent physical decline and muscle homeostasis<br>
+            <span class="cite-label">Journal:</span> Nature Communications<br>
+            <span class="cite-label">Year:</span> 2021 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 34385433<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1038/s41467-021-24509-5" target="_blank" rel="noopener">10.1038/s41467-021-24509-5</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// What to Expect</p>
+      <h2 class="section-title">General Timeline</h2>
+      <p style="color:var(--text2);font-size:0.9rem;margin-bottom:1.5rem;line-height:1.7">Based on community experience and emerging research. MOTS-c has a shorter published human track record than other compounds on this site — approach with appropriate patience and monitoring.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num" style="color:var(--c4)">1–2</div><div class="step-content"><h4>Weeks 1–2</h4><p>Improved energy during workouts is commonly the first reported change — a noticeable increase in endurance and reduced perceived effort at the same intensity. Some users report better blood sugar stability throughout the day.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c4)">3–6</div><div class="step-content"><h4>Weeks 3–6</h4><p>Recovery between training sessions improves. Body composition may begin shifting — less fat accumulation and better muscle retention, particularly in those combining MOTS-c with regular training. Metabolic flexibility improvements (less energy crashes, more stable energy) become more consistent.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c4)">8–12</div><div class="step-content"><h4>Weeks 8–12</h4><p>Cumulative effects on body composition, endurance, and metabolic stability are most apparent with consistent use and continued training. Community users often describe this as a "baseline lift" — feeling stronger and more metabolically capable at rest and during exertion.</p></div></div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Experience and Protocol</p>
+      <h2 class="section-title">How It Is Used</h2>
+      <p style="color:var(--c1);font-size:0.85rem;font-weight:600;margin-bottom:1.5rem">Personal insights coming soon. In the meantime, here is how the broader wellness community approaches MOTS-c.</p>
+
+      <div class="panel-grid">
+        <div class="panel-block accent">
+          <span class="tag tag-green">Community Protocol</span>
+          <h3>Common Approach</h3>
+          <ul class="checklist" style="margin-top:0.5rem">
+            <li><strong>Dose:</strong> 5–10mg subcutaneous (subQ) injection, 3–5 times per week</li>
+            <li><strong>Timing:</strong> Before exercise or in the morning to align with natural AMPK activation from activity</li>
+            <li><strong>Injection site:</strong> Abdomen or dorsogluteal (upper outer buttock), rotating sites</li>
+            <li><strong>Cycle:</strong> 8–12 weeks on, 4–6 weeks off is the most common approach in the community</li>
+            <li><strong>Stack:</strong> Often used alongside NAD+ precursors (NMN or NR), which work synergistically with MOTS-c's mitochondrial activation pathway</li>
+            <li>Some users prefer daily lower-dose protocols (5mg daily) over higher-dose less-frequent ones</li>
+          </ul>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-blue">Why Use It Alongside GLP Protocols</span>
+          <h3>The Complement Case</h3>
+          <ul class="checklist" style="margin-top:0.5rem">
+            <li>GLP protocols significantly reduce caloric intake — MOTS-c supports the metabolic machinery needed to efficiently use the reduced energy available</li>
+            <li>AMPK activation from MOTS-c promotes fat oxidation (burning fat for fuel), which complements the fat loss goals of GLP protocols</li>
+            <li>Muscle preservation during rapid weight loss is a known challenge — MOTS-c's role in muscle homeostasis (maintaining stable muscle tissue) may help offset some of that loss</li>
+            <li>The exercise mimetic properties are valuable when reduced appetite also reduces energy available for training</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">MOTS-c FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What does "exercise mimetic" mean?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">An exercise mimetic is a compound that activates some of the same cellular pathways that physical exercise does — in this case, AMPK activation, increased fat oxidation, and improved mitochondrial function. This does not mean MOTS-c replaces exercise — it cannot replicate the cardiovascular, structural, and hormonal benefits of actual training. But it can support the metabolic environment that makes exercise more effective and recovery faster.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is MOTS-c approved for human use?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">MOTS-c is a research compound and is not FDA approved for any indication. Most published data comes from preclinical models (mice and cell studies). Early human research is underway but long-term safety data in humans is still limited. It is used in wellness contexts under provider supervision.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How does MOTS-c relate to aging?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">MOTS-c levels naturally decline with age, and this decline correlates with reduced metabolic flexibility, increased insulin resistance, and diminished physical capacity — all hallmarks of metabolic aging. Research interest in MOTS-c as a longevity compound stems from the possibility that restoring age-depleted levels could delay or partially reverse some of these changes. It is one of several mitochondrial-derived peptides (including humanin and SHLP peptides) being studied in this context.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+    </div>
+    <div class="footer-nav">
+      <button onclick="window.location.href='/'">Home</button>
+      <button onclick="window.location.href='/about'">About</button>
+      <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+      <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+      <button onclick="window.location.href='/kpv'">KPV</button>
+      <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+      <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      <button onclick="window.location.href='/5-amino-1mq'">5-Amino-1MQ</button>
+      <button onclick="window.location.href='/journey'">Your Journey</button>
+    </div>
+    <div class="footer-copy">© 2025 FORGEDACTIVE · FOR INFORMATIONAL USE ONLY</div>
+  </div>
+</footer>
+
+<script>
+const palettes = {
+  home:    ['#f472b6','#a78bfa','#60a5fa','#34d399','#fb923c','#facc15'],
+  about:   ['#a78bfa','#818cf8','#60a5fa','#7dd3fc','#c084fc','#facc15'],
+  tirz:    ['#f472b6','#fb923c','#facc15','#f9a8d4','#fbbf24','#f472b6'],
+  reta:    ['#a78bfa','#60a5fa','#34d399','#818cf8','#38bdf8','#a78bfa'],
+  ghkcu:   ['#fb923c','#facc15','#fbbf24','#f97316','#fde68a','#fb923c'],
+  kpv:     ['#34d399','#6ee7b7','#a7f3d0','#059669','#10b981','#34d399'],
+  gluta:   ['#60a5fa','#93c5fd','#a78bfa','#3b82f6','#818cf8','#60a5fa'],
+  tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
+  motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
+  journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
+  amino:   ['#34d399','#facc15','#60a5fa','#10b981','#a78bfa','#34d399'],
+};
+function updateGradient(page) {
+  const p = palettes[page] || palettes.home;
+  const r = document.documentElement;
+  r.style.setProperty('--c1', p[0]);
+  r.style.setProperty('--c2', p[1]);
+  r.style.setProperty('--c3', p[2]);
+  r.style.setProperty('--c4', p[3]);
+  r.style.setProperty('--c5', p[4]);
+  r.style.setProperty('--c6', p[5]);
+}
+function showPage(id) {
+  const routes = {home:'/',about:'/about',tirz:'/tirzepatide',reta:'/retatrutide',ghkcu:'/ghk-cu',kpv:'/kpv',gluta:'/glutathione',tesa:'/tesamorelin',motsc:'/mots-c',amino:'/5-amino-1mq',journey:'/journey'};
+  window.location.href = routes[id] || '/';
+}
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  const h = document.getElementById('hamburger');
+  const open = m.classList.toggle('open');
+  h.setAttribute('aria-expanded', open);
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').setAttribute('aria-expanded','false');
+}
+function toggleMobileSeries(id, btn) {
+  const el = document.getElementById(id);
+  const isOpen = el.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+}
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+function initFadeIns() {
+  const els = document.querySelectorAll('.fade-in:not(.visible)');
+  if (!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  els.forEach(el => obs.observe(el));
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') e.target.click();
+});
+document.addEventListener('DOMContentLoaded', () => {
+  updateGradient('motsc');
+  initFadeIns();
+});
+</script>
+</body>
+</html>
+
+</body>
+</html>
