@@ -23,6 +23,25 @@
 .kit-note { background: var(--surface); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.75); border-radius: var(--radius); padding: 20px 22px; margin-top: 0.5rem; }
 .kit-note p { font-size: 0.82rem; color: var(--text2); line-height: 1.7; }
 .kit-note p + p { margin-top: 6px; }
+.compound-pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.15s;
+  text-decoration: none;
+}
+.compound-pill:hover { transform: translateY(-1px); opacity: 0.85; }
+.pill-met { background: rgba(244,114,182,0.18); color: #be185d; border: 1px solid rgba(244,114,182,0.35); }
+.pill-reg { background: rgba(251,146,60,0.18); color: #c2410c; border: 1px solid rgba(251,146,60,0.35); }
+.pill-perf { background: rgba(167,139,250,0.18); color: #5b21b6; border: 1px solid rgba(167,139,250,0.35); }
 </style>
 </head>
 <body>
@@ -94,9 +113,9 @@
 <div class="page active" id="page-ref">
 
   <div style="padding: 90px clamp(16px,5vw,48px) 6px; max-width:1080px; margin:0 auto;">
-    <p class="hero-eyebrow">// One Vial Kit Reference</p>
+    <p class="hero-eyebrow">// One Vial Kit Catalog</p>
     <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text">PEPTIDES</span></h1>
-    <p class="peptide-subtitle">Kit Reference · All Series</p>
+    <p class="peptide-subtitle">Kit Catalog · All Series</p>
   </div>
 
   <div class="container" style="padding-bottom:60px">
@@ -106,7 +125,7 @@
       <div class="cat-header met">Metabolic Series</div>
 
       <div class="compound-block">
-        <div class="compound-label">Reta</div>
+        <div class="compound-label"><a class="compound-pill pill-met" href="/retatrutide">Reta</a></div>
         <div class="compound-row"><span class="row-left">Max <span class="size">(50mg)</span></span><span class="row-price">619</span></div>
         <div class="compound-row"><span class="row-left">Standard <span class="size">(30mg)</span></span><span class="row-price">429</span></div>
         <div class="compound-row"><span class="row-left">Low <span class="size">(15mg)</span></span><span class="row-price">249</span></div>
@@ -114,7 +133,7 @@
       </div>
 
       <div class="compound-block" style="border-top:2px solid var(--border)">
-        <div class="compound-label">Tirz</div>
+        <div class="compound-label"><a class="compound-pill pill-met" href="/tirzepatide">Tirz</a></div>
         <div class="compound-row"><span class="row-left">Max <span class="size">(40mg)</span></span><span class="row-price">249</span></div>
         <div class="compound-row"><span class="row-left">Standard <span class="size">(30mg)</span></span><span class="row-price">199</span></div>
         <div class="compound-row"><span class="row-left">Starter <span class="size">(15mg)</span></span><span class="row-price">159</span></div>
@@ -126,16 +145,16 @@
       <div class="cat-header reg">Regenerative Series</div>
 
       <div class="compound-block">
-        <div class="compound-label">GHK</div>
-        <div class="compound-row"><span class="row-left">Standard <span class="size">(100mg)</span></span><span class="row-price">179</span></div>
+        <div class="compound-label"><a class="compound-pill pill-reg" href="/ghk-cu">GHK</a></div>
+        <div class="compound-row"><span class="row-left">Standard <span class="size">(100mg - SubQ)</span></span><span class="row-price">179</span></div>
       </div>
 
       <div class="compound-block" style="border-top:2px solid var(--border)">
-        <div class="compound-label">KPV <span class="pill-rs">Restocking Soon</span></div>
+        <div class="compound-label"><a class="compound-pill pill-reg" href="/kpv">KPV</a> <span class="pill-rs">Restocking Soon</span></div>
       </div>
 
       <div class="compound-block" style="border-top:2px solid var(--border)">
-        <div class="compound-label">GSH <span class="pill-rs">Restocking Soon</span></div>
+        <div class="compound-label"><a class="compound-pill pill-reg" href="/glutathione">GSH</a> <span class="pill-rs">Restocking Soon</span></div>
       </div>
     </div>
 
@@ -144,15 +163,15 @@
       <div class="cat-header perf">Performance Series</div>
 
       <div class="compound-block">
-        <div class="compound-label">Tesa <span class="pill-rs">Restocking Soon</span></div>
+        <div class="compound-label"><a class="compound-pill pill-perf" href="/tesamorelin">Tesa</a> <span class="pill-rs">Restocking Soon</span></div>
       </div>
 
       <div class="compound-block" style="border-top:2px solid var(--border)">
-        <div class="compound-label">MOTS <span class="pill-rs">Restocking Soon</span></div>
+        <div class="compound-label"><a class="compound-pill pill-perf" href="/mots-c">MOTS</a> <span class="pill-rs">Restocking Soon</span></div>
       </div>
 
       <div class="compound-block" style="border-top:2px solid var(--border)">
-        <div class="compound-label">5A1MQ <span class="pill-rs">Restocking Soon</span></div>
+        <div class="compound-label"><a class="compound-pill pill-perf" href="/5-amino-1mq">5A1MQ</a> <span class="pill-rs">Restocking Soon</span></div>
       </div>
     </div>
 
