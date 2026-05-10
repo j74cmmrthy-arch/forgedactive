@@ -5,18 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Reference — FORGEDACTIVE</title>
 <meta name="robots" content="noindex, nofollow"/>
-<meta name="description" content="A personal and community-sourced guide to GLP peptide wellness."/>
 <link rel="stylesheet" href="../style.css"/>
+<style>
+.cat-wrap { margin-bottom: 2rem; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.75); }
+.cat-header { padding: 14px 20px; font-family: var(--font-main); font-weight: 800; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text); }
+.cat-header.met { background: linear-gradient(135deg,rgba(244,114,182,0.2),rgba(167,139,250,0.2)); }
+.cat-header.reg { background: linear-gradient(135deg,rgba(251,146,60,0.2),rgba(250,204,21,0.2)); }
+.cat-header.perf { background: linear-gradient(135deg,rgba(96,165,250,0.2),rgba(167,139,250,0.2)); }
+.compound-block { background: rgba(255,255,255,0.45); backdrop-filter: blur(12px); border-top: 1px solid var(--border); }
+.compound-label { padding: 10px 18px; font-family: var(--font-main); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--border2); display: flex; align-items: center; gap: 10px; }
+.compound-row { display: flex; justify-content: space-between; align-items: center; padding: 11px 18px 11px 28px; border-bottom: 1px solid var(--border2); gap: 12px; }
+.compound-row:last-child { border-bottom: none; }
+.row-left { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--text2); }
+.row-left .size { font-size: 0.73rem; color: var(--muted); }
+.row-price { font-family: var(--font-main); font-weight: 700; font-size: 0.92rem; color: var(--text); white-space: nowrap; }
+.pill-rs { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 100px; background: rgba(167,139,250,0.15); color: #7c3aed; border: 1px solid rgba(167,139,250,0.3); white-space: nowrap; }
+.kit-note { background: var(--surface); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.75); border-radius: var(--radius); padding: 20px 22px; margin-top: 0.5rem; }
+.kit-note p { font-size: 0.82rem; color: var(--text2); line-height: 1.7; }
+.kit-note p + p { margin-top: 6px; }
+</style>
 </head>
 <body>
 <div class="gradient-canvas" id="gradCanvas" aria-hidden="true"></div>
+
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-logo" onclick="window.location.href='/'" tabindex="0" role="button" aria-label="FORGEDACTIVE home">
     <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
   </div>
   <div class="nav-links" id="navLinks">
-    <button onclick="window.location.href='/'" data-page="home">Home</button>
-    <button onclick="window.location.href='/about'" data-page="about" class="active-nav">About</button>
+    <button onclick="window.location.href='/'">Home</button>
+    <button onclick="window.location.href='/about'">About</button>
     <div class="nav-dropdown">
       <button class="nav-dropdown-btn" data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
       <div class="dropdown-menu">
@@ -43,14 +61,14 @@
         <button onclick="window.location.href='/5-amino-1mq'">5-Amino-1MQ</button>
       </div>
     </div>
-    <button onclick="window.location.href='/journey'" data-page="journey">Your Journey</button>
+    <button onclick="window.location.href='/journey'">Your Journey</button>
   </div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+<div class="mobile-menu" id="mobileMenu">
   <button onclick="window.location.href='/';closeMenu()">Home</button>
   <button onclick="window.location.href='/about';closeMenu()">About</button>
   <button class="mobile-series-header" onclick="toggleMobileSeries('mob-metabolic',this)">Metabolic Series <span class="m-arrow">▾</span></button>
@@ -72,154 +90,85 @@
   </div>
   <button onclick="window.location.href='/journey';closeMenu()">Your Journey</button>
 </div>
+
 <div class="page active" id="page-ref">
 
-  <div class="peptide-hero">
+  <div style="padding: 90px clamp(16px,5vw,48px) 32px; max-width:1080px; margin:0 auto;">
     <p class="hero-eyebrow">// One Vial Kit Reference</p>
-    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text">PEPTIDES</span></h1>
-    <p class="peptide-subtitle">Kit Catalog · All Series</p>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text">COMPOUNDS</span></h1>
+    <p class="peptide-subtitle">Kit Reference · All Series</p>
+    <p class="peptide-intro" style="margin-top:0.75rem">Each kit includes one vial plus all necessary supplies. Available for local pickup only.</p>
   </div>
 
-  <div class="container section">
+  <div class="container" style="padding-bottom:60px">
 
-    <!-- MET SERIES -->
-    <div class="section fade-in" style="padding-top:0">
-      <div style="background:linear-gradient(135deg,rgba(244,114,182,0.15),rgba(167,139,250,0.15));border:1px solid rgba(244,114,182,0.25);border-radius:var(--radius);padding:14px 20px;margin-bottom:1px;">
-        <p style="font-family:var(--font-main);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text)">Metabolic Series</p>
+    <!-- METABOLIC SERIES -->
+    <div class="cat-wrap">
+      <div class="cat-header met">Metabolic Series</div>
+
+      <div class="compound-block">
+        <div class="compound-label">Reta</div>
+        <div class="compound-row"><span class="row-left">Max <span class="size">(50mg)</span></span><span class="row-price">$619</span></div>
+        <div class="compound-row"><span class="row-left">Standard <span class="size">(30mg)</span></span><span class="row-price">$429</span></div>
+        <div class="compound-row"><span class="row-left">Low <span class="size">(15mg)</span></span><span class="row-price">$249</span></div>
+        <div class="compound-row"><span class="row-left">Starter <span class="size">(10mg)</span> <span class="pill-rs">Restocking Soon</span></span><span class="row-price">$199</span></div>
       </div>
 
-      <!-- Reta -->
-      <div style="background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);border-top:none;border-radius:0;padding:0">
-        <div style="padding:12px 20px;border-bottom:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.82rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase">Reta</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:13px 20px 13px 32px;border-bottom:1px solid var(--border2)">
-          <span style="font-size:0.88rem;color:var(--text2)">Max <span style="color:var(--muted);font-size:0.78rem">(50mg)</span></span>
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.95rem;color:var(--text)">$619</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:13px 20px 13px 32px;border-bottom:1px solid var(--border2)">
-          <span style="font-size:0.88rem;color:var(--text2)">Standard <span style="color:var(--muted);font-size:0.78rem">(30mg)</span></span>
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.95rem;color:var(--text)">$429</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:13px 20px 13px 32px;border-bottom:1px solid var(--border2)">
-          <span style="font-size:0.88rem;color:var(--text2)">Low <span style="color:var(--muted);font-size:0.78rem">(15mg)</span></span>
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.95rem;color:var(--text)">$249</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:13px 20px 13px 32px;border-bottom:1px solid var(--border2)">
-          <span style="font-size:0.88rem;color:var(--text2);display:flex;align-items:center;gap:10px">Starter <span style="color:var(--muted);font-size:0.78rem">(10mg)</span></span>
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.95rem;color:var(--text)">$199</span>
-        </div>
-      </div>
-
-      <!-- Tirz -->
-      <div style="background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);border-top:none;border-radius:0;padding:0;margin-top:8px">
-        <div style="padding:12px 20px;border-bottom:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center">
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.82rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase">Tirz</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:13px 20px 13px 32px;border-bottom:1px solid var(--border2)">
-          <span style="font-size:0.88rem;color:var(--text2)">Max <span style="color:var(--muted);font-size:0.78rem">(40mg)</span></span>
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.95rem;color:var(--text)">$249</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:13px 20px 13px 32px;border-bottom:1px solid var(--border2)">
-          <span style="font-size:0.88rem;color:var(--text2)">Standard <span style="color:var(--muted);font-size:0.78rem">(30mg)</span></span>
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.95rem;color:var(--text)">$199</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:13px 20px 13px 32px">
-          <span style="font-size:0.88rem;color:var(--text2)">Starter <span style="color:var(--muted);font-size:0.78rem">(15mg)</span></span>
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.95rem;color:var(--text)">$159</span>
-        </div>
+      <div class="compound-block" style="border-top:2px solid var(--border)">
+        <div class="compound-label">Tirz</div>
+        <div class="compound-row"><span class="row-left">Max <span class="size">(40mg)</span></span><span class="row-price">$249</span></div>
+        <div class="compound-row"><span class="row-left">Standard <span class="size">(30mg)</span></span><span class="row-price">$199</span></div>
+        <div class="compound-row"><span class="row-left">Starter <span class="size">(15mg)</span></span><span class="row-price">$159</span></div>
       </div>
     </div>
 
-    <!-- REG SERIES -->
-    <div class="section fade-in" style="padding-top:0">
-      <div style="background:linear-gradient(135deg,rgba(251,146,60,0.15),rgba(250,204,21,0.15));border:1px solid rgba(251,146,60,0.25);border-radius:var(--radius);padding:14px 20px;margin-bottom:1px;">
-        <p style="font-family:var(--font-main);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text)">Regenerative Series</p>
+    <!-- REGENERATIVE SERIES -->
+    <div class="cat-wrap">
+      <div class="cat-header reg">Regenerative Series</div>
+
+      <div class="compound-block">
+        <div class="compound-label">GHK</div>
+        <div class="compound-row"><span class="row-left">Standard <span class="size">(100mg)</span></span><span class="row-price">$179</span></div>
       </div>
 
-      <!-- GHK -->
-      <div style="background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);border-top:none;border-radius:0;padding:0">
-        <div style="padding:12px 20px;border-bottom:1px solid var(--border2)">
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.82rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase">GHK</span>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:13px 20px 13px 32px">
-          <span style="font-size:0.88rem;color:var(--text2)">Standard <span style="color:var(--muted);font-size:0.78rem">(100mg)</span></span>
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.95rem;color:var(--text)">$179</span>
-        </div>
+      <div class="compound-block" style="border-top:2px solid var(--border)">
+        <div class="compound-label">KPV <span class="pill-rs">Restocking Soon</span></div>
       </div>
 
-      <!-- KPV -->
-      <div style="background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);border-top:none;border-radius:0;padding:0;margin-top:8px">
-        <div style="padding:12px 20px;border-bottom:1px solid var(--border2);display:flex;align-items:center;gap:12px">
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.82rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase">KPV</span>
-          <span style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:rgba(167,139,250,0.15);color:#7c3aed;border:1px solid rgba(167,139,250,0.3)">Restocking Soon</span>
-        </div>
-      </div>
-
-      <!-- GSH -->
-      <div style="background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);border-top:none;border-radius:0;padding:0;margin-top:8px">
-        <div style="padding:12px 20px;border-bottom:1px solid var(--border2);display:flex;align-items:center;gap:12px">
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.82rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase">GSH</span>
-          <span style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:rgba(167,139,250,0.15);color:#7c3aed;border:1px solid rgba(167,139,250,0.3)">Restocking Soon</span>
-        </div>
+      <div class="compound-block" style="border-top:2px solid var(--border)">
+        <div class="compound-label">GSH <span class="pill-rs">Restocking Soon</span></div>
       </div>
     </div>
 
-    <!-- PERF SERIES -->
-    <div class="section fade-in" style="padding-top:0">
-      <div style="background:linear-gradient(135deg,rgba(96,165,250,0.15),rgba(167,139,250,0.15));border:1px solid rgba(96,165,250,0.25);border-radius:var(--radius);padding:14px 20px;margin-bottom:1px;">
-        <p style="font-family:var(--font-main);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text)">Performance Series</p>
+    <!-- PERFORMANCE SERIES -->
+    <div class="cat-wrap">
+      <div class="cat-header perf">Performance Series</div>
+
+      <div class="compound-block">
+        <div class="compound-label">Tesa <span class="pill-rs">Restocking Soon</span></div>
       </div>
 
-      <!-- Tesa -->
-      <div style="background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);border-top:none;border-radius:0;padding:0">
-        <div style="padding:12px 20px;border-bottom:1px solid var(--border2);display:flex;align-items:center;gap:12px">
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.82rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase">Tesa</span>
-          <span style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:rgba(167,139,250,0.15);color:#7c3aed;border:1px solid rgba(167,139,250,0.3)">Restocking Soon</span>
-        </div>
+      <div class="compound-block" style="border-top:2px solid var(--border)">
+        <div class="compound-label">MOTS <span class="pill-rs">Restocking Soon</span></div>
       </div>
 
-      <!-- MOTS -->
-      <div style="background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);border-top:none;border-radius:0;padding:0;margin-top:8px">
-        <div style="padding:12px 20px;border-bottom:1px solid var(--border2);display:flex;align-items:center;gap:12px">
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.82rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase">MOTS</span>
-          <span style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:rgba(167,139,250,0.15);color:#7c3aed;border:1px solid rgba(167,139,250,0.3)">Restocking Soon</span>
-        </div>
-      </div>
-
-      <!-- 5A1MQ -->
-      <div style="background:var(--surface);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.7);border-top:none;border-radius:0;padding:0;margin-top:8px">
-        <div style="padding:12px 20px;border-bottom:1px solid var(--border2);display:flex;align-items:center;gap:12px">
-          <span style="font-family:var(--font-main);font-weight:700;font-size:0.82rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase">5A1MQ</span>
-          <span style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:rgba(167,139,250,0.15);color:#7c3aed;border:1px solid rgba(167,139,250,0.3)">Restocking Soon</span>
-        </div>
+      <div class="compound-block" style="border-top:2px solid var(--border)">
+        <div class="compound-label">5A1MQ <span class="pill-rs">Restocking Soon</span></div>
       </div>
     </div>
 
-    <!-- KIT INCLUDES -->
-    <div class="panel-block accent fade-in" style="margin-bottom:2rem">
-      <span class="tag tag-blue">Every Kit Includes</span>
-      <h3>What's in the Box</h3>
-      <ul class="checklist" style="margin-top:0.5rem">
-        <li>One vial of compound at the selected size</li>
-        <li>Syringes and needles appropriate for subcutaneous use</li>
-        <li>Alcohol prep wipes</li>
-        <li>Ice pack for transport</li>
-      </ul>
+    <!-- KIT NOTE -->
+    <div class="kit-note">
+      <p>Every kit includes one vial of compound at the selected size, syringes and needles appropriate for subcutaneous use, alcohol prep wipes, and an ice pack for transport.</p>
+      <p>Available for local pickup only.</p>
     </div>
 
   </div>
-
-  <div style="height:48px"></div>
-
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">
-      <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
-    </div>
+    <div class="footer-logo"><span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span></div>
     <div class="footer-nav">
       <button onclick="window.location.href='/'">Home</button>
       <button onclick="window.location.href='/about'">About</button>
@@ -239,17 +188,7 @@
 
 <script>
 const palettes = {
-  home:    ['#f472b6','#a78bfa','#60a5fa','#34d399','#fb923c','#facc15'],
-  about:   ['#a78bfa','#818cf8','#60a5fa','#7dd3fc','#c084fc','#facc15'],
-  tirz:    ['#f472b6','#fb923c','#facc15','#f9a8d4','#fbbf24','#f472b6'],
-  reta:    ['#a78bfa','#60a5fa','#34d399','#818cf8','#38bdf8','#a78bfa'],
-  ghkcu:   ['#fb923c','#facc15','#fbbf24','#f97316','#fde68a','#fb923c'],
-  kpv:     ['#34d399','#6ee7b7','#a7f3d0','#059669','#10b981','#34d399'],
-  gluta:   ['#60a5fa','#93c5fd','#a78bfa','#3b82f6','#818cf8','#60a5fa'],
-  tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
-  motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
-  journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
-  amino:   ['#34d399','#facc15','#60a5fa','#10b981','#a78bfa','#34d399'],
+  home: ['#f472b6','#a78bfa','#60a5fa','#34d399','#fb923c','#facc15'],
 };
 function updateGradient(page) {
   const p = palettes[page] || palettes.home;
@@ -260,10 +199,6 @@ function updateGradient(page) {
   r.style.setProperty('--c4', p[3]);
   r.style.setProperty('--c5', p[4]);
   r.style.setProperty('--c6', p[5]);
-}
-function showPage(id) {
-  const routes = {home:'/',about:'/about',tirz:'/tirzepatide',reta:'/retatrutide',ghkcu:'/ghk-cu',kpv:'/kpv',gluta:'/glutathione',tesa:'/tesamorelin',motsc:'/mots-c',amino:'/5-amino-1mq',journey:'/journey'};
-  window.location.href = routes[id] || '/';
 }
 function toggleMenu() {
   const m = document.getElementById('mobileMenu');
@@ -280,12 +215,6 @@ function toggleMobileSeries(id, btn) {
   const isOpen = el.classList.toggle('open');
   btn.classList.toggle('open', isOpen);
 }
-function toggleFaq(btn) {
-  const item = btn.closest('.faq-item');
-  const wasOpen = item.classList.contains('open');
-  item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!wasOpen) item.classList.add('open');
-}
 function initFadeIns() {
   const els = document.querySelectorAll('.fade-in:not(.visible)');
   if (!els.length) return;
@@ -296,19 +225,13 @@ function initFadeIns() {
         obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  }, { threshold: 0.08 });
   els.forEach(el => obs.observe(el));
 }
-document.addEventListener('keydown', e => {
-  if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') e.target.click();
-});
 document.addEventListener('DOMContentLoaded', () => {
   updateGradient('home');
   initFadeIns();
 });
 </script>
-</body>
-</html>
-
 </body>
 </html>
