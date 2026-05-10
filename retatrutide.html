@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Retatrutide — FORGEDACTIVE</title>
+<meta name="description" content="A personal and community-sourced guide to GLP peptide wellness."/>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+<div class="gradient-canvas" id="gradCanvas" aria-hidden="true"></div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo" onclick="window.location.href='/'" tabindex="0" role="button" aria-label="FORGEDACTIVE home">
+    <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <button onclick="window.location.href='/'" data-page="home" >Home</button>
+    <button onclick="window.location.href='/about'" data-page="about" >About</button>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn active-nav" data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Metabolic Series</div>
+        
+        <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+        <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      </div>
+    </div>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn " data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Regenerative Series</div>
+        
+        <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+        <button onclick="window.location.href='/kpv'">KPV</button>
+        <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      </div>
+    </div>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn " data-series="performance">Performance <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Performance Series</div>
+        
+        <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+        <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      </div>
+    </div>
+    <button onclick="window.location.href='/journey'" data-page="journey" >Your Journey</button>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+  <button onclick="window.location.href='/';closeMenu()">Home</button>
+  <button onclick="window.location.href='/about';closeMenu()">About</button>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-metabolic',this)">Metabolic Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-metabolic">
+    <button onclick="window.location.href='/tirzepatide';closeMenu()">Tirzepatide</button>
+    <button onclick="window.location.href='/retatrutide';closeMenu()">Retatrutide</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-regen',this)">Regenerative Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-regen">
+    <button onclick="window.location.href='/ghk-cu';closeMenu()">GHK-Cu</button>
+    <button onclick="window.location.href='/kpv';closeMenu()">KPV</button>
+    <button onclick="window.location.href='/glutathione';closeMenu()">Glutathione</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-perf',this)">Performance Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-perf">
+    <button onclick="window.location.href='/tesamorelin';closeMenu()">Tesamorelin</button>
+    <button onclick="window.location.href='/mots-c';closeMenu()">MOTS-c</button>
+  </div>
+  <button onclick="window.location.href='/journey';closeMenu()">Your Journey</button>
+</div>
+
+<div class="page active" id="page-reta">
+<div class="peptide-hero">
+    <span class="tag tag-purple">Metabolic Series · GIP / GLP-1 / Glucagon</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c2),var(--c3));-webkit-background-clip:text;background-clip:text">RETATRUTIDE</span></h1>
+    <p class="peptide-subtitle">LY3437943 · Triple Agonist</p>
+    <p class="peptide-intro">The next frontier in GLP research. Retatrutide adds glucagon receptor agonism to the dual GIP/GLP-1 profile, creating a triple-action compound with Phase 2 data showing over 24% body weight reduction at 48 weeks, surpassing any previously published pharmacological trial.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">TRIPLE AGONIST</span><span class="dot-sep">·</span>GIP + GLP-1 + Glucagon<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 3</span><span class="dot-sep">·</span>Clinical Trials Underway<span class="dot-sep">·</span>
+      <span class="t-accent">24%+</span><span class="dot-sep">·</span>Phase 2 Weight Reduction<span class="dot-sep">·</span>
+      <span class="t-accent">TRIPLE AGONIST</span><span class="dot-sep">·</span>GIP + GLP-1 + Glucagon<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 3</span><span class="dot-sep">·</span>Clinical Trials Underway<span class="dot-sep">·</span>
+      <span class="t-accent">24%+</span><span class="dot-sep">·</span>Phase 2 Weight Reduction<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Triple Action Explained</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block">
+        <span class="tag tag-purple">GLP-1</span>
+        <h3>Appetite and Insulin</h3>
+        <p>Same GLP-1 receptor activity as other compounds in this class: appetite suppression, slowed gastric emptying, and glucose-dependent insulin release. The foundation of the effect profile.</p>
+      </div>
+      <div class="panel-block accent">
+        <span class="tag tag-yellow">GIP</span>
+        <h3>Insulin Sensitivity</h3>
+        <p>GIP agonism improves insulin sensitivity in adipose tissue and enhances metabolic flexibility, the ability to efficiently switch between fat and carbohydrate oxidation depending on activity and availability.</p>
+      </div>
+      <div class="panel-block accent">
+        <span class="tag tag-orange">Glucagon</span>
+        <h3>The Third Axis</h3>
+        <p>Glucagon receptor agonism is the key differentiator. It promotes lipolysis and increases resting energy expenditure. In isolation, glucagon raises blood sugar. Paired with GLP-1 agonism, the glucose-raising effect is blunted while the fat-burning and thermogenic effects remain. This is the mechanism behind the superior body composition data.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-blue">Synergy</span>
+        <h3>Why Three Receptors</h3>
+        <p>GLP-1 manages appetite and insulin. GIP manages insulin sensitivity. Glucagon manages energy expenditure. Together they address metabolic dysregulation from three angles at once, which is why the Phase 2 outcomes exceeded what any dual agonist had previously achieved.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Data Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-purple"></span>Phase 2 Trial — Primary Outcomes</h4>
+          <p class="finding">The Phase 2 trial published in NEJM showed up to 24.2% mean body weight reduction at 48 weeks in participants receiving retatrutide 12mg weekly, the highest weight reduction ever reported in a pharmacological trial at the time. The placebo group lost 2.1%. The dose-response curve remained strong at the highest dose, suggesting the efficacy ceiling has not been reached.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Jastreboff AM, Kaplan LM, Frías JP, et al.<br>
+            <span class="cite-label">Title:</span> Triple-Hormone-Receptor Agonist Retatrutide for Obesity — A Phase 2 Trial<br>
+            <span class="cite-label">Journal:</span> New England Journal of Medicine<br>
+            <span class="cite-label">Year:</span> 2023 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 37366315<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1056/NEJMoa2301972" target="_blank" rel="noopener">10.1056/NEJMoa2301972</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-orange"></span>Liver Fat Reduction</h4>
+          <p class="finding">Phase 2 participants showed significant reductions in hepatic fat content, relevant for the estimated 25 to 30% of adults with non-alcoholic fatty liver disease. The glucagon receptor component is believed to drive much of this benefit through direct glucagon receptor signaling in hepatocytes, which promotes fatty acid oxidation and reduces triglyceride synthesis in the liver.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Jastreboff AM, Kaplan LM, Frías JP, et al.<br>
+            <span class="cite-label">Title:</span> Triple-Hormone-Receptor Agonist Retatrutide for Obesity — A Phase 2 Trial<br>
+            <span class="cite-label">Journal:</span> New England Journal of Medicine<br>
+            <span class="cite-label">Year:</span> 2023 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 37366315<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1056/NEJMoa2301972" target="_blank" rel="noopener">10.1056/NEJMoa2301972</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Glucagon and Energy Expenditure — Mechanistic Basis</h4>
+          <p class="finding">The preclinical foundation for using glucagon co-agonism alongside GLP-1 was established in a landmark 2009 Nature Chemical Biology paper showing that dual GLP-1/glucagon co-agonism eliminated obesity in rodents by combining appetite suppression with elevated energy expenditure. Retatrutide extends this to a triple-hormone approach in humans.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Day JW, Ottaway N, Patterson JT, et al.<br>
+            <span class="cite-label">Title:</span> A new glucagon and GLP-1 co-agonist eliminates obesity in rodents<br>
+            <span class="cite-label">Journal:</span> Nature Chemical Biology<br>
+            <span class="cite-label">Year:</span> 2009 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 19935657<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1038/nchembio.209" target="_blank" rel="noopener">10.1038/nchembio.209</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Personal Experience</p>
+      <h2 class="section-title">My Experience</h2>
+      <div class="panel-grid">
+        <div class="panel-block">
+          <span class="tag tag-purple">Weeks 1–2</span>
+          <h3>Getting Acclimated</h3>
+          <p>The first couple of weeks felt like my body was adjusting to a new set of rules. The sensation I noticed most was a heaviness or fullness in my stomach, almost like a brick, because my brain and habits were still calibrated to eating a certain amount but my digestion simply could not handle that volume anymore. It was a clear mismatch between old habits and new biology.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-purple">Weeks 3–8</span>
+          <h3>Settling In</h3>
+          <p>The stomach heaviness eased as eating habits began to realign with the new signals. Bloating and general inflammation that I had noticed early on started to subside after the first month. Appetite suppression was consistent and the food noise effect became apparent. Body composition changes were noticeable by weeks six to eight.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-orange">Months 3–4</span>
+          <h3>Managing Allodynia</h3>
+          <p>Around the third and fourth month I developed allodynia, a skin sensitivity where normal sensations like clothing or light touch feel like a healing sunburn without the pain. After researching this side effect and finding it was a known phenomenon in the community, I moved to split dosing, dividing the weekly dose across two smaller injections. This helped significantly and was only done when the side effects were genuinely unmanageable since weekly dosing was otherwise convenient.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-blue">Overall</span>
+          <h3>What Stood Out</h3>
+          <p>The thermogenic quality was distinct from anything in the tirzepatide experience reports I had heard from friends and family. A perceptible increase in resting warmth and energy. The body composition changes, particularly in areas that tend to be stubborn, were more pronounced. It is a more physiologically intense compound and that intensity is real.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">Retatrutide FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the difference between retatrutide and tirzepatide?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Tirzepatide targets two receptors: GIP and GLP-1. Retatrutide adds a third: the glucagon receptor. That addition increases resting energy expenditure and enhances fat mobilization beyond what dual agonism achieves. Phase 2 data showed 24.2% mean weight reduction for retatrutide versus 20.9% for tirzepatide in their respective trials. That said, tirzepatide is FDA approved with a much larger safety dataset. Retatrutide is still in Phase 3. These are not interchangeable compounds and the decision between them should involve a healthcare provider.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is retatrutide FDA approved?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">As of this writing, retatrutide is not FDA approved. It is in Phase 3 clinical trials. Understanding the regulatory status of any compound you are considering is an important first step.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is allodynia and does retatrutide cause it?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Allodynia is a condition where normally non-painful stimuli, like clothing contact or light touch, produce an uncomfortable hypersensitive sensation. It has been reported by some retatrutide users, often described as a skin sensitivity resembling a healing sunburn without actual pain. It is not universal. Split dosing, dividing the weekly amount into two smaller injections across the week, is a strategy some users find reduces this effect. Always discuss any significant side effects with your provider.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What should I monitor while on retatrutide?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Heart rate is the most important additional metric beyond standard GLP monitoring. The glucagon component produces mild sympathomimetic effects and Phase 2 documented average resting heart rate increases of four to five beats per minute. Blood pressure, cardiovascular symptoms, lipase, amylase, and liver enzymes should all be tracked with your provider.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What does triple agonist mean in practical terms?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">You eat less via GLP-1, your body uses insulin more efficiently via GIP, and your resting metabolic rate increases via glucagon. The combination produces body composition results that are qualitatively different from single or dual agonists, particularly noticeable in visceral fat reduction and overall energy expenditure at rest.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ GHK-CU ═══════════════ -->
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+    </div>
+    <div class="footer-nav">
+      <button onclick="window.location.href='/'">Home</button>
+      <button onclick="window.location.href='/about'">About</button>
+      <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+      <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+      <button onclick="window.location.href='/kpv'">KPV</button>
+      <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+      <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      <button onclick="window.location.href='/journey'">Your Journey</button>
+    </div>
+    <div class="footer-copy">© 2025 FORGEDACTIVE · FOR INFORMATIONAL USE ONLY</div>
+  </div>
+</footer>
+
+<script>
+const palettes = {
+  home:    ['#f472b6','#a78bfa','#60a5fa','#34d399','#fb923c','#facc15'],
+  about:   ['#a78bfa','#818cf8','#60a5fa','#7dd3fc','#c084fc','#facc15'],
+  tirz:    ['#f472b6','#fb923c','#facc15','#f9a8d4','#fbbf24','#f472b6'],
+  reta:    ['#a78bfa','#60a5fa','#34d399','#818cf8','#38bdf8','#a78bfa'],
+  ghkcu:   ['#fb923c','#facc15','#fbbf24','#f97316','#fde68a','#fb923c'],
+  kpv:     ['#34d399','#6ee7b7','#a7f3d0','#059669','#10b981','#34d399'],
+  gluta:   ['#60a5fa','#93c5fd','#a78bfa','#3b82f6','#818cf8','#60a5fa'],
+  tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
+  motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
+  journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
+};
+function updateGradient(page) {
+  const p = palettes[page] || palettes.home;
+  const r = document.documentElement;
+  r.style.setProperty('--c1', p[0]);
+  r.style.setProperty('--c2', p[1]);
+  r.style.setProperty('--c3', p[2]);
+  r.style.setProperty('--c4', p[3]);
+  r.style.setProperty('--c5', p[4]);
+  r.style.setProperty('--c6', p[5]);
+}
+
+const pageRoutes = {
+  'home':    '/',
+  'about':   '/about',
+  'tirz':    '/tirzepatide',
+  'reta':    '/retatrutide',
+  'ghkcu':   '/ghk-cu',
+  'kpv':     '/kpv',
+  'gluta':   '/glutathione',
+  'tesa':    '/tesamorelin',
+  'motsc':   '/mots-c',
+  'journey': '/journey',
+};
+
+function showPage(id) {
+  const url = pageRoutes[id] || '/';
+  window.location.href = url;
+}
+
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  const h = document.getElementById('hamburger');
+  const open = m.classList.toggle('open');
+  h.setAttribute('aria-expanded', open);
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').setAttribute('aria-expanded','false');
+}
+function toggleMobileSeries(id, btn) {
+  const el = document.getElementById(id);
+  const isOpen = el.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+}
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+function initFadeIns() {
+  const els = document.querySelectorAll('.fade-in:not(.visible)');
+  if (!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  els.forEach(el => obs.observe(el));
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') e.target.click();
+});
+document.addEventListener('DOMContentLoaded', () => {
+  initFadeIns();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateGradient('reta');
+  initFadeIns();
+});
+</script>
+</body>
+</html>

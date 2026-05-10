@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>KPV — FORGEDACTIVE</title>
+<meta name="description" content="A personal and community-sourced guide to GLP peptide wellness."/>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+<div class="gradient-canvas" id="gradCanvas" aria-hidden="true"></div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo" onclick="window.location.href='/'" tabindex="0" role="button" aria-label="FORGEDACTIVE home">
+    <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <button onclick="window.location.href='/'" data-page="home" >Home</button>
+    <button onclick="window.location.href='/about'" data-page="about" >About</button>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn " data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Metabolic Series</div>
+        
+        <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+        <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      </div>
+    </div>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn active-nav" data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Regenerative Series</div>
+        
+        <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+        <button onclick="window.location.href='/kpv'">KPV</button>
+        <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      </div>
+    </div>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn " data-series="performance">Performance <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Performance Series</div>
+        
+        <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+        <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      </div>
+    </div>
+    <button onclick="window.location.href='/journey'" data-page="journey" >Your Journey</button>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+  <button onclick="window.location.href='/';closeMenu()">Home</button>
+  <button onclick="window.location.href='/about';closeMenu()">About</button>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-metabolic',this)">Metabolic Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-metabolic">
+    <button onclick="window.location.href='/tirzepatide';closeMenu()">Tirzepatide</button>
+    <button onclick="window.location.href='/retatrutide';closeMenu()">Retatrutide</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-regen',this)">Regenerative Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-regen">
+    <button onclick="window.location.href='/ghk-cu';closeMenu()">GHK-Cu</button>
+    <button onclick="window.location.href='/kpv';closeMenu()">KPV</button>
+    <button onclick="window.location.href='/glutathione';closeMenu()">Glutathione</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-perf',this)">Performance Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-perf">
+    <button onclick="window.location.href='/tesamorelin';closeMenu()">Tesamorelin</button>
+    <button onclick="window.location.href='/mots-c';closeMenu()">MOTS-c</button>
+  </div>
+  <button onclick="window.location.href='/journey';closeMenu()">Your Journey</button>
+</div>
+
+<div class="page active" id="page-kpv">
+<div class="peptide-hero">
+    <span class="tag tag-green">Regenerative Series · Anti-Inflammatory Tripeptide</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c4),var(--c3));-webkit-background-clip:text;background-clip:text">KPV</span></h1>
+    <p class="peptide-subtitle">Lysine-Proline-Valine · Alpha-MSH Fragment</p>
+    <p class="peptide-intro">A tripeptide derived from the C-terminus of alpha-melanocyte stimulating hormone, known primarily for its potent anti-inflammatory properties. Research covers inflammatory bowel conditions, skin inflammation, wound healing, and systemic inflammation reduction, making it particularly relevant for conditions driven by chronic inflammatory signaling.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">KPV</span><span class="dot-sep">·</span>Alpha-MSH Fragment<span class="dot-sep">·</span>
+      <span class="t-accent">ANTI-INFLAMMATORY</span><span class="dot-sep">·</span>Gut Health<span class="dot-sep">·</span>
+      <span class="t-accent">SKIN</span><span class="dot-sep">·</span>Eczema · Wound Healing<span class="dot-sep">·</span>
+      <span class="t-accent">KPV</span><span class="dot-sep">·</span>Alpha-MSH Fragment<span class="dot-sep">·</span>
+      <span class="t-accent">ANTI-INFLAMMATORY</span><span class="dot-sep">·</span>Gut Health<span class="dot-sep">·</span>
+      <span class="t-accent">SKIN</span><span class="dot-sep">·</span>Eczema · Wound Healing<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Mechanism of Action</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block accent">
+        <span class="tag tag-green">MC1R Agonism</span>
+        <h3>Melanocortin Pathway</h3>
+        <p>KPV is derived from the C-terminal sequence of alpha-MSH and exerts its anti-inflammatory effects primarily through the melanocortin-1 receptor (MC1R). This pathway downregulates NF-kB signaling, one of the central drivers of inflammatory cascades throughout the body, including in gut epithelium and skin.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-blue">Gut and Skin</span>
+        <h3>Where It Acts</h3>
+        <p>KPV shows particular activity in gut epithelial tissue, making it relevant to inflammatory bowel conditions, and in skin, where it modulates keratinocyte and immune cell inflammatory signaling. Its small tripeptide structure allows it to penetrate tissues effectively and act at the site of inflammation directly.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Science Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-green"></span>Gut Inflammation and Colitis</h4>
+          <p class="finding">Studies in murine colitis models found KPV significantly reduced inflammatory markers including TNF-alpha, IL-6, and NF-kB activity in gut epithelial tissue. Oral administration showed bioactivity, and the peptide demonstrated protective effects on the intestinal mucosal barrier during inflammatory challenge.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Dalmasso G, Charrier-Hisamuddin L, Nguyen HT, et al.<br>
+            <span class="cite-label">Title:</span> PepT1-mediated tripeptide KPV uptake reduces intestinal inflammation<br>
+            <span class="cite-label">Journal:</span> Gastroenterology<br>
+            <span class="cite-label">Year:</span> 2008 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 18082524<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1053/j.gastro.2007.10.026" target="_blank" rel="noopener">10.1053/j.gastro.2007.10.026</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Skin Inflammation and Wound Healing</h4>
+          <p class="finding">KPV has been studied for its ability to reduce skin inflammation and accelerate wound healing. Topical application reduced inflammatory cytokine expression in skin models and promoted organized healing responses. Its MC1R-mediated activity in keratinocytes makes it a candidate for inflammatory skin conditions including eczema and psoriasis.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Brzoska T, Luger TA, Maaser C, et al.<br>
+            <span class="cite-label">Title:</span> Alpha-melanocyte-stimulating hormone and related tripeptides: biochemistry, antiinflammatory and protective effects in vitro and in vivo, and future perspectives for the treatment of immune-mediated inflammatory diseases<br>
+            <span class="cite-label">Journal:</span> Endocrine Reviews<br>
+            <span class="cite-label">Year:</span> 2008 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 18349283<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1210/er.2007-0027" target="_blank" rel="noopener">10.1210/er.2007-0027</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Personal and Community Experience</p>
+      <h2 class="section-title">Experience</h2>
+      <div class="panel-grid">
+        <div class="panel-block accent">
+          <span class="tag tag-green">Personal</span>
+          <h3>Eczema and Inflammation</h3>
+          <p>KPV was added specifically to address skin inflammation from eczema. The results were noticeable. Flare frequency decreased, the intensity of existing flares was reduced, and overall skin inflammation became more manageable over several weeks of consistent use. It did not eliminate eczema entirely but meaningfully changed how the skin responded to triggers.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-blue">Community Reported</span>
+          <h3>What Others Report</h3>
+          <p>The wellness and biohacking community most commonly reports KPV benefits around gut inflammation, including reduced bloating, improved digestive comfort, and symptom reduction in those with inflammatory bowel conditions. Skin-related improvements mirror the personal experience above, with eczema, rosacea, and general skin irritation being frequently cited use cases.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">KPV FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How is KPV typically used?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">KPV can be taken orally in capsule form, administered subcutaneously, or applied topically. Oral use is common for gut-related applications since the PepT1 transporter in gut epithelium actively transports the tripeptide. Subcutaneous use is more common for systemic anti-inflammatory effects. Topical for skin conditions.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is KPV safe for long-term use?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">KPV is a small naturally derived peptide with a favorable safety profile in research to date. Long-term human data is limited compared to more established compounds. As with any research peptide, quality sourcing and appropriate dosing are important, and use should be discussed with a healthcare provider.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How quickly does KPV work for inflammation?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Some users report noticeable improvements in gut comfort and skin inflammation within one to two weeks. More significant changes typically build over four to eight weeks. The timeline varies based on the severity of the underlying condition and route of administration.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can KPV be combined with GHK-Cu or glutathione?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">These compounds work through different mechanisms and there are no known adverse interactions between them. Many people in the regenerative wellness space use KPV, GHK-Cu, and glutathione together as they address complementary aspects of cellular health: inflammation, tissue repair, and oxidative defense respectively.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ GLUTATHIONE ═══════════════ -->
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+    </div>
+    <div class="footer-nav">
+      <button onclick="window.location.href='/'">Home</button>
+      <button onclick="window.location.href='/about'">About</button>
+      <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+      <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+      <button onclick="window.location.href='/kpv'">KPV</button>
+      <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+      <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      <button onclick="window.location.href='/journey'">Your Journey</button>
+    </div>
+    <div class="footer-copy">© 2025 FORGEDACTIVE · FOR INFORMATIONAL USE ONLY</div>
+  </div>
+</footer>
+
+<script>
+const palettes = {
+  home:    ['#f472b6','#a78bfa','#60a5fa','#34d399','#fb923c','#facc15'],
+  about:   ['#a78bfa','#818cf8','#60a5fa','#7dd3fc','#c084fc','#facc15'],
+  tirz:    ['#f472b6','#fb923c','#facc15','#f9a8d4','#fbbf24','#f472b6'],
+  reta:    ['#a78bfa','#60a5fa','#34d399','#818cf8','#38bdf8','#a78bfa'],
+  ghkcu:   ['#fb923c','#facc15','#fbbf24','#f97316','#fde68a','#fb923c'],
+  kpv:     ['#34d399','#6ee7b7','#a7f3d0','#059669','#10b981','#34d399'],
+  gluta:   ['#60a5fa','#93c5fd','#a78bfa','#3b82f6','#818cf8','#60a5fa'],
+  tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
+  motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
+  journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
+};
+function updateGradient(page) {
+  const p = palettes[page] || palettes.home;
+  const r = document.documentElement;
+  r.style.setProperty('--c1', p[0]);
+  r.style.setProperty('--c2', p[1]);
+  r.style.setProperty('--c3', p[2]);
+  r.style.setProperty('--c4', p[3]);
+  r.style.setProperty('--c5', p[4]);
+  r.style.setProperty('--c6', p[5]);
+}
+
+const pageRoutes = {
+  'home':    '/',
+  'about':   '/about',
+  'tirz':    '/tirzepatide',
+  'reta':    '/retatrutide',
+  'ghkcu':   '/ghk-cu',
+  'kpv':     '/kpv',
+  'gluta':   '/glutathione',
+  'tesa':    '/tesamorelin',
+  'motsc':   '/mots-c',
+  'journey': '/journey',
+};
+
+function showPage(id) {
+  const url = pageRoutes[id] || '/';
+  window.location.href = url;
+}
+
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  const h = document.getElementById('hamburger');
+  const open = m.classList.toggle('open');
+  h.setAttribute('aria-expanded', open);
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').setAttribute('aria-expanded','false');
+}
+function toggleMobileSeries(id, btn) {
+  const el = document.getElementById(id);
+  const isOpen = el.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+}
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+function initFadeIns() {
+  const els = document.querySelectorAll('.fade-in:not(.visible)');
+  if (!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  els.forEach(el => obs.observe(el));
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') e.target.click();
+});
+document.addEventListener('DOMContentLoaded', () => {
+  initFadeIns();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateGradient('kpv');
+  initFadeIns();
+});
+</script>
+</body>
+</html>

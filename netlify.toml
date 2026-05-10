@@ -1,4 +1,44 @@
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/tirzepatide"
+  to = "/tirzepatide.html"
+  status = 200
+
+[[redirects]]
+  from = "/retatrutide"
+  to = "/retatrutide.html"
+  status = 200
+
+[[redirects]]
+  from = "/ghk-cu"
+  to = "/ghk-cu.html"
+  status = 200
+
+[[redirects]]
+  from = "/kpv"
+  to = "/kpv.html"
+  status = 200
+
+[[redirects]]
+  from = "/glutathione"
+  to = "/glutathione.html"
+  status = 200
+
+[[redirects]]
+  from = "/tesamorelin"
+  to = "/tesamorelin.html"
+  status = 200
+
+[[redirects]]
+  from = "/mots-c"
+  to = "/mots-c.html"
+  status = 200
+
+[[redirects]]
+  from = "/journey"
+  to = "/journey.html"
   status = 200

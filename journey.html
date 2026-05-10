@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Your Journey — FORGEDACTIVE</title>
+<meta name="description" content="A personal and community-sourced guide to GLP peptide wellness."/>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+<div class="gradient-canvas" id="gradCanvas" aria-hidden="true"></div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo" onclick="window.location.href='/'" tabindex="0" role="button" aria-label="FORGEDACTIVE home">
+    <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <button onclick="window.location.href='/'" data-page="home" >Home</button>
+    <button onclick="window.location.href='/about'" data-page="about" >About</button>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn " data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Metabolic Series</div>
+        
+        <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+        <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      </div>
+    </div>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn " data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Regenerative Series</div>
+        
+        <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+        <button onclick="window.location.href='/kpv'">KPV</button>
+        <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      </div>
+    </div>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn " data-series="performance">Performance <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Performance Series</div>
+        
+        <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+        <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      </div>
+    </div>
+    <button onclick="window.location.href='/journey'" data-page="journey" class="active-nav">Your Journey</button>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+  <button onclick="window.location.href='/';closeMenu()">Home</button>
+  <button onclick="window.location.href='/about';closeMenu()">About</button>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-metabolic',this)">Metabolic Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-metabolic">
+    <button onclick="window.location.href='/tirzepatide';closeMenu()">Tirzepatide</button>
+    <button onclick="window.location.href='/retatrutide';closeMenu()">Retatrutide</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-regen',this)">Regenerative Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-regen">
+    <button onclick="window.location.href='/ghk-cu';closeMenu()">GHK-Cu</button>
+    <button onclick="window.location.href='/kpv';closeMenu()">KPV</button>
+    <button onclick="window.location.href='/glutathione';closeMenu()">Glutathione</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-perf',this)">Performance Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-perf">
+    <button onclick="window.location.href='/tesamorelin';closeMenu()">Tesamorelin</button>
+    <button onclick="window.location.href='/mots-c';closeMenu()">MOTS-c</button>
+  </div>
+  <button onclick="window.location.href='/journey';closeMenu()">Your Journey</button>
+</div>
+
+<div class="page active" id="page-journey">
+<div class="peptide-hero">
+    <p class="hero-eyebrow">// Your GLP Path</p>
+    <h1 class="hero-title" style="font-size:clamp(3rem,10vw,8rem)"><span class="grad-text">JOURNEY</span></h1>
+    <p class="peptide-intro">Three phases. This framework comes from personal experience and research, not a medical protocol. Your path will differ, but this arc reflects what most people encounter on a GLP wellness protocol.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">PHASE 1</span><span class="dot-sep">·</span>Starting Out<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 2</span><span class="dot-sep">·</span>Ramping Up<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 3</span><span class="dot-sep">·</span>Maintaining<span class="dot-sep">·</span>
+      Trust the Process<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 1</span><span class="dot-sep">·</span>Starting Out<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 2</span><span class="dot-sep">·</span>Ramping Up<span class="dot-sep">·</span>
+      <span class="t-accent">PHASE 3</span><span class="dot-sep">·</span>Maintaining<span class="dot-sep">·</span>
+      Trust the Process<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="journey-phase fade-in">
+      <p class="phase-label" style="color:var(--c1)">// Phase One</p>
+      <h2 class="phase-title"><span style="background:linear-gradient(135deg,var(--c1),var(--c5));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">STARTING<br>OUT</span></h2>
+      <span class="tag tag-pink">Weeks 1–6 · Lowest Dose · Adjustment</span>
+      <br><br>
+      <div class="panel-grid" style="margin-bottom:20px">
+        <div class="panel-block accent">
+          <h3>What's Happening</h3>
+          <p>Your body is encountering GLP receptor agonism for the first time. Appetite suppression is often dramatic and immediate. GI side effects are most prominent in this phase as the digestive system adapts to slowed gastric emptying. The goal here is tolerability and building a sustainable routine, not pushing for faster results.</p>
+        </div>
+        <div class="panel-block">
+          <h3>What to Expect</h3>
+          <ul class="checklist">
+            <li>Significant appetite reduction, often from the first week</li>
+            <li>Nausea, particularly in weeks one through three</li>
+            <li>Fatigue as caloric intake drops</li>
+            <li>Possible constipation or loose stools</li>
+            <li>Weight changes visible within two to four weeks</li>
+            <li>The quieting of food noise, less mental chatter around eating</li>
+          </ul>
+        </div>
+      </div>
+      <p class="section-label">// Action Steps</p>
+      <div class="steps">
+        <div class="step"><div class="step-num" style="color:var(--c1)">01</div><div class="step-content"><h4>Prioritize Protein From Day One</h4><p>Because you will eat less total food, every meal needs to be protein-anchored. Target 0.8 to 1 gram per pound of body weight. Protein shakes are a practical tool when appetite is low. Muscle loss during rapid weight loss is real and protein is the primary defense against it.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c1)">02</div><div class="step-content"><h4>Hydrate Intentionally</h4><p>Reduced appetite usually means reduced fluid intake too. Target two to three liters of water daily. Add electrolytes if dizziness or fatigue appear, particularly sodium and potassium, which drop alongside reduced food intake.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c1)">03</div><div class="step-content"><h4>Do Not Rush Titration</h4><p>The temptation to escalate dose quickly is strong when results appear. Resist it. Four weeks at each dose level before moving up is a reasonable minimum. Adaptation at each level is what makes the next level tolerable.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c1)">04</div><div class="step-content"><h4>Build Your Injection Routine</h4><p>Same day and time each week. Rotate injection sites systematically. Keep a simple log. Consistent administration produces consistent blood levels and more predictable effects.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c1)">05</div><div class="step-content"><h4>Get Baseline Bloodwork</h4><p>Comprehensive metabolic panel, lipid panel, CBC, HbA1c, thyroid panel before or early in the protocol. This baseline is what you compare against later. Without it there is no reference point for understanding what has changed.</p></div></div>
+      </div>
+    </div>
+
+    <div class="journey-phase fade-in">
+      <p class="phase-label" style="color:var(--c2)">// Phase Two</p>
+      <h2 class="phase-title"><span style="background:linear-gradient(135deg,var(--c2),var(--c3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">RAMPING<br>UP</span></h2>
+      <span class="tag tag-purple">Weeks 6–20 · Dose Escalation · Active Change</span>
+      <br><br>
+      <div class="panel-grid" style="margin-bottom:20px">
+        <div class="panel-block">
+          <h3>What's Happening</h3>
+          <p>You have established baseline tolerability and are incrementally escalating toward your target dose. Body composition changes are most dramatic in this phase. Mental effects also become clearer: reduced food obsession, improved relationship with hunger signals, and often improved mood and energy as metabolic markers shift.</p>
+        </div>
+        <div class="panel-block accent">
+          <h3>What to Expect</h3>
+          <ul class="checklist">
+            <li>Accelerating fat loss as dose increases</li>
+            <li>Brief GI side effect recurrence after each dose escalation</li>
+            <li>Visible body composition changes by weeks eight to twelve</li>
+            <li>Improved fasting glucose and more stable energy throughout the day</li>
+            <li>Plateau periods that are normal and expected</li>
+            <li>Increasing motivation as results become tangible</li>
+          </ul>
+        </div>
+      </div>
+      <p class="section-label">// Action Steps</p>
+      <div class="steps">
+        <div class="step"><div class="step-num" style="color:var(--c2)">01</div><div class="step-content"><h4>Commit to Resistance Training</h4><p>GLP compounds preserve muscle better when paired with a resistance training stimulus. Three intentional sessions per week of compound movements is a meaningful minimum for protecting lean mass during aggressive fat loss.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c2)">02</div><div class="step-content"><h4>Track Meaningfully</h4><p>Weekly weigh-ins are fine. Daily is noise. Monthly progress photos, body measurements, and how your clothes fit provide more useful signal than the scale alone, particularly if muscle is being added while fat is lost.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c2)">03</div><div class="step-content"><h4>Optimize Food Quality</h4><p>You are eating less, so what you eat matters more. Dense vegetables, lean proteins, complex carbohydrates. Ultra-processed foods tend to worsen GI side effects and provide poor satiety per calorie.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c2)">04</div><div class="step-content"><h4>Mid-Protocol Bloodwork</h4><p>Around weeks ten to twelve, repeat your key labs. Look for changes in the lipid panel, HbA1c, and liver enzymes. Share results with your provider and adjust accordingly.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c2)">05</div><div class="step-content"><h4>Manage Plateaus with Patience</h4><p>Weight loss plateaus are physiology, not failure. Before escalating dose, reassess protein intake, check for caloric drift, and increase daily movement. Give each dose level at least four to six weeks before calling a plateau.</p></div></div>
+      </div>
+    </div>
+
+    <div class="journey-phase fade-in" style="border-bottom:none">
+      <p class="phase-label" style="color:var(--c5)">// Phase Three</p>
+      <h2 class="phase-title"><span style="background:linear-gradient(135deg,var(--c5),var(--c6));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">MAINTAINING</span></h2>
+      <span class="tag tag-orange">Ongoing · Maintenance Dose · Long-Term</span>
+      <br><br>
+      <div class="panel-grid" style="margin-bottom:20px">
+        <div class="panel-block accent">
+          <h3>What's Happening</h3>
+          <p>You have reached your target outcomes and the goal shifts from change to preservation. This is often the hardest phase psychologically. The dramatic results of Phase 2 slow, and the work becomes about protecting what has been built.</p>
+          <br><p>Maintenance dosing is typically lower than peak and is highly individual. Some people stay on indefinitely at low doses; others cycle off with intentional planning.</p>
+        </div>
+        <div class="panel-block">
+          <h3>What to Expect</h3>
+          <ul class="checklist">
+            <li>Stabilized weight with slower, more gradual changes</li>
+            <li>Finding your minimum effective maintenance dose</li>
+            <li>Sustained appetite control at lower doses</li>
+            <li>Side effects minimal or absent at maintenance levels</li>
+            <li>Some weight return if stopping, which is physiologically normal</li>
+            <li>Long-term metabolic improvements consolidating</li>
+          </ul>
+        </div>
+      </div>
+      <p class="section-label">// Action Steps</p>
+      <div class="steps">
+        <div class="step"><div class="step-num" style="color:var(--c5)">01</div><div class="step-content"><h4>Find Your Minimum Effective Dose</h4><p>Work with your provider to slowly taper and identify the lowest dose that sustains your outcomes. This reduces cost, side effects, and long-term tolerance concerns.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c5)">02</div><div class="step-content"><h4>Build Lifestyle Infrastructure</h4><p>Long-term success depends on whether your habits become self-sustaining. The compound manages appetite, but the cooking habits, training routine, and sleep hygiene need to become automatic. Build them while momentum is high.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c5)">03</div><div class="step-content"><h4>Annual Bloodwork Reviews</h4><p>Annual comprehensive labs including metabolic panel, lipids, thyroid, and liver enzymes give the full picture of how your body is responding over time. Keep records. Trends matter as much as any single result.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c5)">04</div><div class="step-content"><h4>Have an Off-Protocol Plan</h4><p>If you plan to stop, do it with intention. Tapering slowly, having solid nutrition and training plans in place, and managing expectations about appetite returning are all important. Stopping abruptly without a lifestyle foundation is the most common pathway to full weight regain.</p></div></div>
+        <div class="step"><div class="step-num" style="color:var(--c5)">05</div><div class="step-content"><h4>Acknowledge What You Have Built</h4><p>Metabolic improvements, rebuilt habits, and a changed relationship with food are not trivial outcomes. GLP protocols done with intention fundamentally reshape baseline metabolic health. Maintenance is not just protecting weight; it is protecting an entire rebuilt metabolic identity.</p></div></div>
+      </div>
+
+      <div class="cta-band fade-in" style="margin-top:2rem">
+        <p class="section-label">// Explore the Compounds</p>
+        <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,3rem)">Read the Series</h2>
+        <p>Now that you understand the journey, explore each compound with full research citations, experience, and FAQ.</p>
+        <div class="btns">
+          <button class="btn-primary" onclick="showPage('tirz')">Tirzepatide</button>
+          <button class="btn-outline" onclick="showPage('reta')">Retatrutide</button>
+          <button class="btn-outline" onclick="showPage('ghkcu')">GHK-Cu</button>
+          <button class="btn-outline" onclick="showPage('kpv')">KPV</button>
+          <button class="btn-outline" onclick="showPage('tesa')">Tesamorelin</button>
+          <button class="btn-outline" onclick="showPage('motsc')">MOTS-c</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer-bar" style="margin-top:2rem">
+      FOR INFORMATIONAL PURPOSES ONLY. This journey framework is based on personal experience and publicly available research. It is not a medical protocol. Always work with a licensed healthcare provider. Individual experiences vary significantly.
+    </div>
+  </div>
+  <div style="height:48px"></div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+    </div>
+    <div class="footer-nav">
+      <button onclick="window.location.href='/'">Home</button>
+      <button onclick="window.location.href='/about'">About</button>
+      <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+      <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+      <button onclick="window.location.href='/kpv'">KPV</button>
+      <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+      <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      <button onclick="window.location.href='/journey'">Your Journey</button>
+    </div>
+    <div class="footer-copy">© 2025 FORGEDACTIVE · FOR INFORMATIONAL USE ONLY</div>
+  </div>
+</footer>
+
+<script>
+const palettes = {
+  home:    ['#f472b6','#a78bfa','#60a5fa','#34d399','#fb923c','#facc15'],
+  about:   ['#a78bfa','#818cf8','#60a5fa','#7dd3fc','#c084fc','#facc15'],
+  tirz:    ['#f472b6','#fb923c','#facc15','#f9a8d4','#fbbf24','#f472b6'],
+  reta:    ['#a78bfa','#60a5fa','#34d399','#818cf8','#38bdf8','#a78bfa'],
+  ghkcu:   ['#fb923c','#facc15','#fbbf24','#f97316','#fde68a','#fb923c'],
+  kpv:     ['#34d399','#6ee7b7','#a7f3d0','#059669','#10b981','#34d399'],
+  gluta:   ['#60a5fa','#93c5fd','#a78bfa','#3b82f6','#818cf8','#60a5fa'],
+  tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
+  motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
+  journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
+};
+function updateGradient(page) {
+  const p = palettes[page] || palettes.home;
+  const r = document.documentElement;
+  r.style.setProperty('--c1', p[0]);
+  r.style.setProperty('--c2', p[1]);
+  r.style.setProperty('--c3', p[2]);
+  r.style.setProperty('--c4', p[3]);
+  r.style.setProperty('--c5', p[4]);
+  r.style.setProperty('--c6', p[5]);
+}
+
+const pageRoutes = {
+  'home':    '/',
+  'about':   '/about',
+  'tirz':    '/tirzepatide',
+  'reta':    '/retatrutide',
+  'ghkcu':   '/ghk-cu',
+  'kpv':     '/kpv',
+  'gluta':   '/glutathione',
+  'tesa':    '/tesamorelin',
+  'motsc':   '/mots-c',
+  'journey': '/journey',
+};
+
+function showPage(id) {
+  const url = pageRoutes[id] || '/';
+  window.location.href = url;
+}
+
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  const h = document.getElementById('hamburger');
+  const open = m.classList.toggle('open');
+  h.setAttribute('aria-expanded', open);
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').setAttribute('aria-expanded','false');
+}
+function toggleMobileSeries(id, btn) {
+  const el = document.getElementById(id);
+  const isOpen = el.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+}
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+function initFadeIns() {
+  const els = document.querySelectorAll('.fade-in:not(.visible)');
+  if (!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  els.forEach(el => obs.observe(el));
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') e.target.click();
+});
+document.addEventListener('DOMContentLoaded', () => {
+  initFadeIns();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateGradient('journey');
+  initFadeIns();
+});
+</script>
+</body>
+</html>

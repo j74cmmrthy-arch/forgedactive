@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tesamorelin — FORGEDACTIVE</title>
+<meta name="description" content="A personal and community-sourced guide to GLP peptide wellness."/>
+<link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+<div class="gradient-canvas" id="gradCanvas" aria-hidden="true"></div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo" onclick="window.location.href='/'" tabindex="0" role="button" aria-label="FORGEDACTIVE home">
+    <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <button onclick="window.location.href='/'" data-page="home" >Home</button>
+    <button onclick="window.location.href='/about'" data-page="about" >About</button>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn " data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Metabolic Series</div>
+        
+        <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+        <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      </div>
+    </div>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn " data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Regenerative Series</div>
+        
+        <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+        <button onclick="window.location.href='/kpv'">KPV</button>
+        <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      </div>
+    </div>
+    
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn active-nav" data-series="performance">Performance <span class="arrow">▾</span></button>
+      <div class="dropdown-menu">
+        <div class="dropdown-label">Performance Series</div>
+        
+        <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+        <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      </div>
+    </div>
+    <button onclick="window.location.href='/journey'" data-page="journey" >Your Journey</button>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+  <button onclick="window.location.href='/';closeMenu()">Home</button>
+  <button onclick="window.location.href='/about';closeMenu()">About</button>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-metabolic',this)">Metabolic Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-metabolic">
+    <button onclick="window.location.href='/tirzepatide';closeMenu()">Tirzepatide</button>
+    <button onclick="window.location.href='/retatrutide';closeMenu()">Retatrutide</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-regen',this)">Regenerative Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-regen">
+    <button onclick="window.location.href='/ghk-cu';closeMenu()">GHK-Cu</button>
+    <button onclick="window.location.href='/kpv';closeMenu()">KPV</button>
+    <button onclick="window.location.href='/glutathione';closeMenu()">Glutathione</button>
+  </div>
+  <button class="mobile-series-header" onclick="toggleMobileSeries('mob-perf',this)">Performance Series <span class="m-arrow">▾</span></button>
+  <div class="mobile-series-children" id="mob-perf">
+    <button onclick="window.location.href='/tesamorelin';closeMenu()">Tesamorelin</button>
+    <button onclick="window.location.href='/mots-c';closeMenu()">MOTS-c</button>
+  </div>
+  <button onclick="window.location.href='/journey';closeMenu()">Your Journey</button>
+</div>
+
+<div class="page active" id="page-tesa">
+<div class="peptide-hero">
+    <span class="tag tag-blue">Performance Series · GHRH Analogue</span>
+    <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c3),var(--c2));-webkit-background-clip:text;background-clip:text">TESAMORELIN</span></h1>
+    <p class="peptide-subtitle">TH9507 · GHRH Analogue · FDA Approved</p>
+    <p class="peptide-intro">A synthetic analogue of growth hormone releasing hormone (GHRH) that stimulates the pituitary to produce growth hormone in natural pulses. FDA approved for HIV-associated lipodystrophy, tesamorelin is used in wellness contexts for visceral fat reduction, muscle fullness and retention, and improvements in hair and nail quality associated with optimized growth hormone levels.</p>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span class="t-accent">GHRH ANALOGUE</span><span class="dot-sep">·</span>GH Secretagogue<span class="dot-sep">·</span>
+      <span class="t-accent">VISCERAL FAT</span><span class="dot-sep">·</span>Reduction<span class="dot-sep">·</span>
+      <span class="t-accent">MUSCLE FULLNESS</span><span class="dot-sep">·</span>Retention<span class="dot-sep">·</span>
+      <span class="t-accent">FDA APPROVED</span><span class="dot-sep">·</span>Lipodystrophy<span class="dot-sep">·</span>
+      <span class="t-accent">GHRH ANALOGUE</span><span class="dot-sep">·</span>GH Secretagogue<span class="dot-sep">·</span>
+      <span class="t-accent">VISCERAL FAT</span><span class="dot-sep">·</span>Reduction<span class="dot-sep">·</span>
+      <span class="t-accent">MUSCLE FULLNESS</span><span class="dot-sep">·</span>Retention<span class="dot-sep">·</span>
+      <span class="t-accent">FDA APPROVED</span><span class="dot-sep">·</span>Lipodystrophy<span class="dot-sep">·</span>
+    </div>
+  </div>
+
+  <div class="container section">
+    <p class="section-label">// How It Works</p>
+    <h2 class="section-title">Mechanism of Action</h2>
+    <div class="panel-grid fade-in">
+      <div class="panel-block accent">
+        <span class="tag tag-blue">GHRH Receptor</span>
+        <h3>Pulsatile GH Stimulation</h3>
+        <p>Tesamorelin binds to GHRH receptors on the pituitary gland and stimulates the natural pulsatile release of growth hormone. Unlike direct GH administration, tesamorelin preserves the physiological feedback loop, meaning the body's own regulatory mechanisms remain intact and GH is released in natural pulses rather than a constant stream.</p>
+      </div>
+      <div class="panel-block">
+        <span class="tag tag-purple">IGF-1 Pathway</span>
+        <h3>Downstream Effects</h3>
+        <p>Increased GH pulses stimulate IGF-1 production in the liver, which mediates most of the anabolic and lipolytic effects attributed to growth hormone: visceral fat mobilization, muscle protein synthesis, collagen production, and improved body composition. IGF-1 levels are the primary biomarker tracked during tesamorelin protocols.</p>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Published Research</p>
+      <h2 class="section-title">What the Science Shows</h2>
+      <div class="research-stack">
+        <div class="research-block">
+          <h4><span class="dot dot-blue"></span>Visceral Fat Reduction — Primary Trial Data</h4>
+          <p class="finding">Phase 3 trials in HIV-associated lipodystrophy showed tesamorelin reduced visceral adipose tissue (VAT) by approximately 15 to 18% over 26 weeks compared to placebo. Trunk fat reduction and improved waist-to-hip ratio were significant findings. These results established tesamorelin as the first FDA-approved pharmacological treatment for visceral fat accumulation.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Falutz J, Mamputu JC, Potvin D, et al.<br>
+            <span class="cite-label">Title:</span> Effects of Tesamorelin (TH9507), a Growth Hormone-Releasing Factor Analog, in HIV-Infected Patients with Excess Abdominal Fat<br>
+            <span class="cite-label">Journal:</span> Annals of Internal Medicine<br>
+            <span class="cite-label">Year:</span> 2010 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 20439575<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.7326/0003-4819-152-7-201004060-00005" target="_blank" rel="noopener">10.7326/0003-4819-152-7-201004060-00005</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-purple"></span>Muscle Retention and Body Composition</h4>
+          <p class="finding">Tesamorelin trials showed preservation and modest improvement in lean mass alongside fat reduction, consistent with GH's known role in promoting muscle protein synthesis via IGF-1. This body recomposition effect, simultaneous fat loss and lean mass support, distinguishes it from pure caloric restriction approaches.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Falutz J, Allas S, Blot K, et al.<br>
+            <span class="cite-label">Title:</span> Metabolic effects of a growth hormone-releasing factor in patients with HIV<br>
+            <span class="cite-label">Journal:</span> New England Journal of Medicine<br>
+            <span class="cite-label">Year:</span> 2007 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 17978290<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1056/NEJMoa072362" target="_blank" rel="noopener">10.1056/NEJMoa072362</a>
+          </div>
+        </div>
+        <div class="research-block">
+          <h4><span class="dot dot-green"></span>Cognitive Function</h4>
+          <p class="finding">A randomized controlled trial found tesamorelin improved verbal memory and executive function in older adults with mild cognitive impairment, attributed to IGF-1's neuroprotective and neuroplasticity effects in the hippocampus. This is an emerging area of interest for the compound beyond its metabolic applications.</p>
+          <div class="citation-box">
+            <span class="cite-label">Authors:</span> Baker LD, Cholerton BA, Craft S, et al.<br>
+            <span class="cite-label">Title:</span> Effects of growth hormone-releasing hormone on cognitive function in adults with mild cognitive impairment and healthy older adults<br>
+            <span class="cite-label">Journal:</span> JAMA Neurology<br>
+            <span class="cite-label">Year:</span> 2012 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 23419552<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1001/jamaneurol.2013.1518" target="_blank" rel="noopener">10.1001/jamaneurol.2013.1518</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Community Experience</p>
+      <h2 class="section-title">What Users Report</h2>
+      <div class="panel-grid">
+        <div class="panel-block">
+          <span class="tag tag-blue">Body Composition</span>
+          <h3>Visceral Fat and Muscle</h3>
+          <p>The most consistently reported community observation is noticeable reduction in abdominal visceral fat, the deeper fat layer surrounding organs, over eight to sixteen weeks. This is often described as a flattening effect distinct from subcutaneous fat loss. Simultaneously, users report improved muscle fullness and a more defined appearance even without significant changes in training volume.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-purple">Hair and Nails</span>
+          <h3>Quality Improvements</h3>
+          <p>Hair and nail quality improvements are a commonly reported secondary effect, attributed to elevated IGF-1 and its role in keratin synthesis and follicle activity. Users describe faster nail growth, improved nail strength, and increased hair thickness and growth rate, typically noticeable after eight to twelve weeks of consistent use.</p>
+        </div>
+        <div class="panel-block accent">
+          <span class="tag tag-green">Sleep and Recovery</span>
+          <h3>GH Pulse Benefits</h3>
+          <p>Because tesamorelin enhances natural GH pulsatility, users frequently report improved sleep quality, particularly deeper slow-wave sleep when GH is naturally secreted most abundantly. Faster physical recovery and reduced next-day soreness after training are also commonly described.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-orange">Watchpoints</span>
+          <h3>What to Monitor</h3>
+          <p>IGF-1 levels should be monitored regularly as the primary efficacy and safety biomarker. Fasting glucose and insulin sensitivity warrant attention since GH can have transient effects on glucose metabolism. Water retention and mild joint discomfort are sometimes reported early in a protocol and typically resolve.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <p class="section-label">// Common Questions</p>
+      <h2 class="section-title">Tesamorelin FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How does tesamorelin differ from direct growth hormone?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Tesamorelin stimulates the pituitary to produce GH naturally and in physiological pulses, preserving the feedback loop. Direct GH administration bypasses this regulation entirely and shuts down the pituitary's own production. Tesamorelin's approach is generally considered safer for long-term use and avoids the desensitization and side effect profile associated with exogenous GH at higher doses.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long does it take to see results?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Most community reports place visible visceral fat changes at eight to sixteen weeks with consistent daily subcutaneous dosing. Hair and nail improvements typically appear at eight to twelve weeks. IGF-1 levels measurably rise within the first two to four weeks, which is why early bloodwork is useful for confirming the compound is working as expected.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Does tesamorelin affect blood sugar?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Growth hormone has well-documented transient effects on insulin sensitivity. Tesamorelin can cause mild increases in fasting glucose, particularly early in a protocol. Monitoring fasting glucose and HbA1c is recommended. People with pre-existing insulin resistance or diabetes should approach this compound with particular provider oversight.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can tesamorelin be combined with the metabolic series compounds?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">The mechanisms operate through different pathways and there are no known direct pharmacological conflicts. In practice, combining a GLP compound for appetite and metabolic regulation with tesamorelin for GH pulse optimization and visceral fat targeting is a logical pairing for body recomposition goals. Provider supervision is important when running multiple protocols simultaneously.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
+  <div style="height:48px"></div>
+</div>
+
+
+<!-- ═══════════════ MOTS-C ═══════════════ -->
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
+    </div>
+    <div class="footer-nav">
+      <button onclick="window.location.href='/'">Home</button>
+      <button onclick="window.location.href='/about'">About</button>
+      <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
+      <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
+      <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
+      <button onclick="window.location.href='/kpv'">KPV</button>
+      <button onclick="window.location.href='/glutathione'">Glutathione</button>
+      <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
+      <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      <button onclick="window.location.href='/journey'">Your Journey</button>
+    </div>
+    <div class="footer-copy">© 2025 FORGEDACTIVE · FOR INFORMATIONAL USE ONLY</div>
+  </div>
+</footer>
+
+<script>
+const palettes = {
+  home:    ['#f472b6','#a78bfa','#60a5fa','#34d399','#fb923c','#facc15'],
+  about:   ['#a78bfa','#818cf8','#60a5fa','#7dd3fc','#c084fc','#facc15'],
+  tirz:    ['#f472b6','#fb923c','#facc15','#f9a8d4','#fbbf24','#f472b6'],
+  reta:    ['#a78bfa','#60a5fa','#34d399','#818cf8','#38bdf8','#a78bfa'],
+  ghkcu:   ['#fb923c','#facc15','#fbbf24','#f97316','#fde68a','#fb923c'],
+  kpv:     ['#34d399','#6ee7b7','#a7f3d0','#059669','#10b981','#34d399'],
+  gluta:   ['#60a5fa','#93c5fd','#a78bfa','#3b82f6','#818cf8','#60a5fa'],
+  tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
+  motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
+  journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
+};
+function updateGradient(page) {
+  const p = palettes[page] || palettes.home;
+  const r = document.documentElement;
+  r.style.setProperty('--c1', p[0]);
+  r.style.setProperty('--c2', p[1]);
+  r.style.setProperty('--c3', p[2]);
+  r.style.setProperty('--c4', p[3]);
+  r.style.setProperty('--c5', p[4]);
+  r.style.setProperty('--c6', p[5]);
+}
+
+const pageRoutes = {
+  'home':    '/',
+  'about':   '/about',
+  'tirz':    '/tirzepatide',
+  'reta':    '/retatrutide',
+  'ghkcu':   '/ghk-cu',
+  'kpv':     '/kpv',
+  'gluta':   '/glutathione',
+  'tesa':    '/tesamorelin',
+  'motsc':   '/mots-c',
+  'journey': '/journey',
+};
+
+function showPage(id) {
+  const url = pageRoutes[id] || '/';
+  window.location.href = url;
+}
+
+function toggleMenu() {
+  const m = document.getElementById('mobileMenu');
+  const h = document.getElementById('hamburger');
+  const open = m.classList.toggle('open');
+  h.setAttribute('aria-expanded', open);
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').setAttribute('aria-expanded','false');
+}
+function toggleMobileSeries(id, btn) {
+  const el = document.getElementById(id);
+  const isOpen = el.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+}
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+function initFadeIns() {
+  const els = document.querySelectorAll('.fade-in:not(.visible)');
+  if (!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  els.forEach(el => obs.observe(el));
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') e.target.click();
+});
+document.addEventListener('DOMContentLoaded', () => {
+  initFadeIns();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateGradient('tesa');
+  initFadeIns();
+});
+</script>
+</body>
+</html>
