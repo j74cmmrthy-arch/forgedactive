@@ -958,7 +958,9 @@ nav {
   border: 1px solid rgba(251,146,60,0.25);
   border-radius: var(--radius);
   padding: clamp(20px,4vw,32px);
-  margin: 2rem 0;
+  margin: 2rem auto;
+  max-width: 1080px;
+  width: calc(100% - clamp(32px, 10vw, 96px));
 }
 }
 .notice-box h4 {
