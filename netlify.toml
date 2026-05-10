@@ -42,3 +42,8 @@
   from = "/journey"
   to = "/journey.html"
   status = 200
+
+[[redirects]]
+  from = "/5-amino-1mq"
+  to = "/5-amino-1mq.html"
+  status = 200

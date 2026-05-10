@@ -5,61 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>GHK-Cu — FORGEDACTIVE</title>
 <meta name="description" content="A personal and community-sourced guide to GLP peptide wellness."/>
-
-<!-- OG / Social Preview -->
 <meta property="og:title" content="FORGEDACTIVE"/>
 <meta property="og:description" content="A personal and community-sourced guide to GLP peptide wellness."/>
 <meta property="og:image" content="https://forgedactive.com/og-image.jpg"/>
-<meta property="og:url" content="https://forgedactive.com"/>
+<meta property="og:url" content="https://forgedactive.com/ghk-cu"/>
 <meta property="og:type" content="website"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://forgedactive.com/og-image.jpg"/>
-  
 <link rel="stylesheet" href="/style.css"/>
 </head>
 <body>
-
 <div class="gradient-canvas" id="gradCanvas" aria-hidden="true"></div>
-
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-logo" onclick="window.location.href='/'" tabindex="0" role="button" aria-label="FORGEDACTIVE home">
     <span class="logo-forged">FORGED</span><span class="logo-active">ACTIVE</span>
   </div>
   <div class="nav-links" id="navLinks">
-    <button onclick="window.location.href='/'" data-page="home" >Home</button>
-    <button onclick="window.location.href='/about'" data-page="about" >About</button>
-    
+    <button onclick="window.location.href='/'" data-page="home">Home</button>
+    <button onclick="window.location.href='/about'" data-page="about" class="active-nav">About</button>
     <div class="nav-dropdown">
-      <button class="nav-dropdown-btn " data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
+      <button class="nav-dropdown-btn" data-series="metabolic">Metabolic <span class="arrow">▾</span></button>
       <div class="dropdown-menu">
         <div class="dropdown-label">Metabolic Series</div>
-        
         <button onclick="window.location.href='/tirzepatide'">Tirzepatide</button>
         <button onclick="window.location.href='/retatrutide'">Retatrutide</button>
       </div>
     </div>
-    
     <div class="nav-dropdown">
-      <button class="nav-dropdown-btn active-nav" data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
+      <button class="nav-dropdown-btn" data-series="regenerative">Regenerative <span class="arrow">▾</span></button>
       <div class="dropdown-menu">
         <div class="dropdown-label">Regenerative Series</div>
-        
         <button onclick="window.location.href='/ghk-cu'">GHK-Cu</button>
         <button onclick="window.location.href='/kpv'">KPV</button>
         <button onclick="window.location.href='/glutathione'">Glutathione</button>
       </div>
     </div>
-    
     <div class="nav-dropdown">
-      <button class="nav-dropdown-btn " data-series="performance">Performance <span class="arrow">▾</span></button>
+      <button class="nav-dropdown-btn" data-series="performance">Performance <span class="arrow">▾</span></button>
       <div class="dropdown-menu">
         <div class="dropdown-label">Performance Series</div>
-        
         <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
         <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+        <button onclick="window.location.href='/5-amino-1mq'">5-Amino-1MQ</button>
       </div>
     </div>
-    <button onclick="window.location.href='/journey'" data-page="journey" >Your Journey</button>
+    <button onclick="window.location.href='/journey'" data-page="journey">Your Journey</button>
   </div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -84,44 +74,38 @@
   <div class="mobile-series-children" id="mob-perf">
     <button onclick="window.location.href='/tesamorelin';closeMenu()">Tesamorelin</button>
     <button onclick="window.location.href='/mots-c';closeMenu()">MOTS-c</button>
+    <button onclick="window.location.href='/5-amino-1mq';closeMenu()">5-Amino-1MQ</button>
   </div>
   <button onclick="window.location.href='/journey';closeMenu()">Your Journey</button>
 </div>
-
 <div class="page active" id="page-ghkcu">
-<div class="peptide-hero">
-    <span class="tag tag-orange">Regenerative Series · Copper Binding Tripeptide</span>
+
+  <div class="peptide-hero">
+    <div class="breadcrumb"><button onclick="window.location.href='/'">Home</button> <span>/</span> Regenerative Series <span>/</span> GHK-Cu</div>
+    <span class="tag tag-orange">Regenerative Series · Copper Peptide</span>
     <h1 class="peptide-title"><span class="grad-text" style="background:linear-gradient(135deg,var(--c5),var(--c6));-webkit-background-clip:text;background-clip:text">GHK-CU</span></h1>
     <p class="peptide-subtitle">Glycyl-L-Histidyl-L-Lysine · Copper Complex</p>
-    <p class="peptide-intro">A naturally occurring copper-binding tripeptide found in human plasma, saliva, and urine, with concentrations that decline with age. Documented for regenerative properties across skin, collagen synthesis, wound healing, anti-inflammatory signaling, and hair follicle stimulation.</p>
+    <p class="peptide-intro">A naturally occurring peptide (short protein chain) found in human plasma, saliva, and urine that binds and transports copper to cells. Concentrations decline with age. Research documents its role in collagen production, wound healing, inflammation reduction, and hair follicle stimulation — making it a well-supported complement to GLP protocols.</p>
   </div>
 
-  <div class="ticker-wrap" aria-hidden="true">
-    <div class="ticker">
-      <span class="t-accent">COPPER PEPTIDE</span><span class="dot-sep">·</span>Anti-Aging<span class="dot-sep">·</span>
-      <span class="t-accent">COLLAGEN</span><span class="dot-sep">·</span>Synthesis<span class="dot-sep">·</span>
-      <span class="t-accent">WOUND HEALING</span><span class="dot-sep">·</span>Regeneration<span class="dot-sep">·</span>
-      <span class="t-accent">4000+ GENES</span><span class="dot-sep">·</span>Modulated<span class="dot-sep">·</span>
-      <span class="t-accent">COPPER PEPTIDE</span><span class="dot-sep">·</span>Anti-Aging<span class="dot-sep">·</span>
-      <span class="t-accent">COLLAGEN</span><span class="dot-sep">·</span>Synthesis<span class="dot-sep">·</span>
-      <span class="t-accent">WOUND HEALING</span><span class="dot-sep">·</span>Regeneration<span class="dot-sep">·</span>
-      <span class="t-accent">4000+ GENES</span><span class="dot-sep">·</span>Modulated<span class="dot-sep">·</span>
-    </div>
-  </div>
+  <div class="ticker-wrap" aria-hidden="true"><div class="ticker">
+    <span class="t-accent">REGENERATIVE SERIES</span><span class="dot-sep">·</span>Copper Peptide<span class="dot-sep">·</span>Collagen Synthesis<span class="dot-sep">·</span>Anti-Inflammatory<span class="dot-sep">·</span>4000+ Genes Modulated<span class="dot-sep">·</span>
+    <span class="t-accent">REGENERATIVE SERIES</span><span class="dot-sep">·</span>Copper Peptide<span class="dot-sep">·</span>Collagen Synthesis<span class="dot-sep">·</span>Anti-Inflammatory<span class="dot-sep">·</span>4000+ Genes Modulated<span class="dot-sep">·</span>
+  </div></div>
 
   <div class="container section">
     <p class="section-label">// How It Works</p>
     <h2 class="section-title">Mechanism of Action</h2>
     <div class="panel-grid fade-in">
       <div class="panel-block accent">
-        <span class="tag tag-orange">Copper Chaperone</span>
-        <h3>Targeted Copper Delivery</h3>
-        <p>GHK-Cu binds copper ions and facilitates their targeted delivery to cells and tissues. Copper is essential for collagen cross-linking, elastin formation, superoxide dismutase activity, and numerous enzymatic processes. GHK-Cu functions as a precision delivery vehicle getting copper to where it is needed.</p>
+        <span class="tag tag-orange">Copper Transport</span>
+        <h3>Getting Copper Where It Needs to Go</h3>
+        <p>GHK-Cu works by binding copper ions and delivering them to specific cells and tissues. Copper is essential for collagen cross-linking (the process that makes collagen fibers strong and organized), elastin formation, and antioxidant defense. GHK-Cu acts as a precision delivery system rather than a free copper supplement, which matters because unbound copper can be harmful.</p>
       </div>
       <div class="panel-block">
-        <span class="tag tag-yellow">Epigenetic Effects</span>
-        <h3>Broad Gene Regulation</h3>
-        <p>Research by Pickart and colleagues identified GHK-Cu as a broad gene regulator, modulating expression of over 4,000 human genes including those governing inflammation, DNA repair, antioxidant response, metabolism, and tissue remodeling. This positions it well beyond a simple topical cosmetic agent.</p>
+        <span class="tag tag-yellow">Gene Regulation</span>
+        <h3>Broad Cellular Effects</h3>
+        <p>Research has identified GHK-Cu as a regulator of over 4,000 human genes — including those governing inflammation, DNA repair, antioxidant response, and tissue remodeling. This broad activity is what makes it more than just a topical skin product, and why it is increasingly used as part of systemic wellness protocols.</p>
       </div>
     </div>
 
@@ -131,7 +115,7 @@
       <div class="research-stack">
         <div class="research-block">
           <h4><span class="dot dot-orange"></span>Skin, Collagen, and Dermal Repair</h4>
-          <p class="finding">Multiple clinical and in vitro studies demonstrate GHK-Cu increases collagen synthesis, stimulates fibroblast proliferation, improves skin firmness and elasticity, and reduces fine lines. Measurable improvements in dermal thickness and barrier function have been documented. These effects are particularly relevant during GLP-related weight loss which can affect skin laxity.</p>
+          <p class="finding">Multiple studies demonstrate GHK-Cu increases collagen synthesis (production of the structural protein that gives skin firmness), stimulates fibroblast proliferation (growth of the cells responsible for making collagen), and measurably improves skin thickness and elasticity. These effects are particularly relevant when significant weight loss changes skin texture and laxity.</p>
           <div class="citation-box">
             <span class="cite-label">Authors:</span> Pickart L, Vasquez-Soltero JM, Margolina A<br>
             <span class="cite-label">Title:</span> GHK Peptide as a Natural Modulator of Multiple Cellular Pathways in Skin Regeneration<br>
@@ -142,7 +126,7 @@
         </div>
         <div class="research-block">
           <h4><span class="dot dot-pink"></span>Wound Healing and Tissue Repair</h4>
-          <p class="finding">GHK-Cu promotes wound healing by stimulating fibroblast proliferation, angiogenesis, and anti-inflammatory signaling. It shifts injured tissue toward organized regeneration rather than scar formation through modulation of TGF-beta signaling pathways, reducing the fibrotic response while supporting structural tissue repair.</p>
+          <p class="finding">GHK-Cu accelerates wound healing by promoting new blood vessel formation and modulating TGF-beta signaling — a pathway that controls whether injured tissue heals with organized structure or forms disorganized scar tissue. It appears to favor the former, supporting cleaner tissue repair.</p>
           <div class="citation-box">
             <span class="cite-label">Authors:</span> Pickart L<br>
             <span class="cite-label">Title:</span> The Human Tri-Peptide GHK and Tissue Remodeling<br>
@@ -152,32 +136,42 @@
           </div>
         </div>
         <div class="research-block">
-          <h4><span class="dot dot-blue"></span>Gene Expression and Anti-Inflammatory Modulation</h4>
-          <p class="finding">Analysis found significant downregulation of inflammatory pathways including TNF-alpha, NF-kB targets, and multiple interleukins alongside upregulation of genes related to DNA repair, antioxidant response, and mitochondrial function, suggesting a broad pro-longevity signaling effect extending well beyond topical applications.</p>
+          <h4><span class="dot dot-green"></span>Hair Follicle Stimulation</h4>
+          <p class="finding">Studies show GHK-Cu promotes hair follicle enlargement and stimulates growth factor signaling. This is directly relevant for GLP users, as rapid weight loss can trigger telogen effluvium — a form of temporary hair shedding caused by physiological stress (the body prioritizing resources elsewhere during rapid change).</p>
           <div class="citation-box">
-            <span class="cite-label">Authors:</span> Pickart L, Vasquez-Soltero JM, Margolina A<br>
-            <span class="cite-label">Title:</span> The Human Tripeptide GHK-Cu in Prevention of Oxidative Stress and Degenerative Conditions of Aging<br>
-            <span class="cite-label">Journal:</span> Oxidative Medicine and Cellular Longevity<br>
-            <span class="cite-label">Year:</span> 2012 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 22928086<br>
-            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1155/2012/324832" target="_blank" rel="noopener">10.1155/2012/324832</a>
+            <span class="cite-label">Authors:</span> Uno H, Kurata S<br>
+            <span class="cite-label">Title:</span> Chemical agents and peptides affect hair growth<br>
+            <span class="cite-label">Journal:</span> Journal of Investigative Dermatology<br>
+            <span class="cite-label">Year:</span> 1993 &nbsp;|&nbsp; <span class="cite-label">PMID:</span> 8326151<br>
+            <span class="cite-label">DOI:</span> <a href="https://doi.org/10.1111/1523-1747.ep12362988" target="_blank" rel="noopener">10.1111/1523-1747.ep12362988</a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="section fade-in">
-      <p class="section-label">// Personal Experience</p>
-      <h2 class="section-title">My Experience</h2>
+      <p class="section-label">// Experience and Protocol</p>
+      <h2 class="section-title">How It Was Used</h2>
       <div class="panel-grid">
-        <div class="panel-block">
-          <span class="tag tag-orange">Reasoning</span>
-          <h3>Why It Was Added</h3>
-          <p>GLP-driven weight loss changes body composition rapidly. Skin, hair, and connective tissue do not always keep pace with that speed of change. GHK-Cu was added to support skin quality, collagen synthesis, and to help address mild systemic inflammation that accompanied aggressive metabolic change.</p>
-        </div>
         <div class="panel-block accent">
-          <span class="tag tag-yellow">What I Noticed</span>
-          <h3>Slow and Steady</h3>
-          <p>Skin texture improved noticeably over eight to twelve weeks, particularly firmness. Workout recovery felt faster. Hair quality improved. These are subtle, compounding effects. GHK-Cu rewards patience and consistent use. It is not a compound where results arrive in the first few weeks.</p>
+          <span class="tag tag-orange">Personal Experience</span>
+          <h3>My Protocol</h3>
+          <p>I used 2mg nightly via subcutaneous (subQ) injection — into the fatty layer under the skin, not into muscle. Timing the injection before bed was intentional: collagen repair and signaling activity ramps up during sleep, so the overnight window was a logical choice for a compound that supports those processes.</p>
+          <br>
+          <p>I initially injected into the love handles (the soft tissue at the sides of the lower abdomen), but experienced an injection site reaction — a localized spicy, burning sensation at the injection point. I moved to the dorsogluteal area (upper outer buttock, the fatty region rather than the muscle beneath) and had no further issues.</p>
+          <br>
+          <p>I also supplemented with vitamins and foods known to support collagen production — vitamin C, zinc, and collagen-rich foods — to complement the compound's signaling effects.</p>
+        </div>
+        <div class="panel-block">
+          <span class="tag tag-yellow">Results and Cycle</span>
+          <h3>What I Noticed</h3>
+          <p>Results became apparent around week 3. Hair and nails were visibly growing faster — something I had noticed slowing while on a GLP compound, likely due to reduced overall nutrition intake. Skin felt firmer over time.</p>
+          <br>
+          <p>The hair and nail changes were a clear signal: GLP protocols reduce how much you eat, which means nutrients that support hair and nail growth can become limited. GHK-Cu appeared to help offset this directly.</p>
+          <br>
+          <p>I ran two months on, then took a one-month break before considering another cycle. This cycling approach is common in the community and gives the body a reset period.</p>
+          <br>
+          <p>For the injection site reaction: if you experience that burning sensation at one site, simply move the injection location. It is not harmful — just uncomfortable — and site-specific.</p>
         </div>
       </div>
     </div>
@@ -188,30 +182,31 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q" onclick="toggleFaq(this)">How is GHK-Cu administered?<span class="chevron">▾</span></button>
-          <div class="faq-a"><div class="faq-a-inner">GHK-Cu can be used topically via creams or serums, subcutaneously via injection for systemic effects, or intranasally. Route of administration affects which effects are most prominent. Topical primarily benefits skin. Subcutaneous administration reaches systemic circulation for broader regenerative and anti-inflammatory effects.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">GHK-Cu can be used topically (creams and serums, widely available in skincare), subcutaneously (subQ injection for systemic effects), or intranasally (through the nose). The route determines what effects are most prominent. Topical primarily benefits the skin. SubQ injection reaches the bloodstream for broader effects across tissues.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Can GHK-Cu be used alongside the metabolic compounds?<span class="chevron">▾</span></button>
-          <div class="faq-a"><div class="faq-a-inner">They operate on entirely different receptor systems and pathways with no known interactions. The combination is complementary: GLP compounds drive metabolic change while GHK-Cu supports tissue quality, skin integrity, and recovery during that transformation. This pairing logic is the core reason they are used together in this protocol.</div></div>
+          <button class="faq-q" onclick="toggleFaq(this)">Why inject before bed?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Much of the body's repair and regeneration activity — including collagen synthesis — is upregulated (increased) during sleep. Injecting GHK-Cu before bed aligns the compound's peak availability with this natural repair window. It is a timing strategy, not a requirement, but it makes biological sense.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">How long does GHK-Cu take to show results?<span class="chevron">▾</span></button>
-          <div class="faq-a"><div class="faq-a-inner">Topical effects on skin can appear in four to eight weeks with consistent use. Systemic effects from subcutaneous administration typically take eight to twelve or more weeks, as collagen remodeling and gene regulation changes occur on biological timescales rather than days.</div></div>
+          <button class="faq-q" onclick="toggleFaq(this)">What causes the injection site reaction?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Some users report a localized burning or "spicy" sensation at the injection site. This is a local tissue response, not a systemic allergic reaction. Rotating injection sites and choosing areas with more fatty tissue — like the upper outer buttock (dorsogluteal area) — typically resolves it. If the reaction is severe or spreads, stop and consult a provider.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">Does copper toxicity apply to GHK-Cu?<span class="chevron">▾</span></button>
-          <div class="faq-a"><div class="faq-a-inner">Copper toxicity is theoretically possible with excessive supplementation, but GHK-Cu research doses are far below toxic thresholds. The peptide is specifically designed to transport copper in a controlled, bioavailable manner rather than releasing free ionic copper into circulation. Standard research dosing has not been associated with copper toxicity in published literature.</div></div>
+          <button class="faq-q" onclick="toggleFaq(this)">Can GHK-Cu be used alongside GLP compounds like retatrutide?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. They work through completely different pathways with no known interactions. GLP compounds drive metabolic change while GHK-Cu supports tissue quality, skin integrity, and recovery during that process. This complementary logic is the core reason they are often stacked together.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long does it take to see results?<span class="chevron">▾</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Topical results can appear in 4 to 8 weeks. With subcutaneous use, noticeable effects typically emerge around weeks 3 to 4, with more significant changes at 8 to 12 weeks as collagen remodeling accumulates. It is a compound that rewards patience and consistent use.</div></div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
   <div style="height:48px"></div>
-</div>
 
-
-<!-- ═══════════════ KPV ═══════════════ -->
 </div>
 
 <!-- FOOTER -->
@@ -230,6 +225,7 @@
       <button onclick="window.location.href='/glutathione'">Glutathione</button>
       <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
       <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      <button onclick="window.location.href='/5-amino-1mq'">5-Amino-1MQ</button>
       <button onclick="window.location.href='/journey'">Your Journey</button>
     </div>
     <div class="footer-copy">© 2025 FORGEDACTIVE · FOR INFORMATIONAL USE ONLY</div>
@@ -248,6 +244,7 @@ const palettes = {
   tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
   motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
   journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
+  amino:   ['#34d399','#facc15','#60a5fa','#10b981','#a78bfa','#34d399'],
 };
 function updateGradient(page) {
   const p = palettes[page] || palettes.home;
@@ -259,25 +256,10 @@ function updateGradient(page) {
   r.style.setProperty('--c5', p[4]);
   r.style.setProperty('--c6', p[5]);
 }
-
-const pageRoutes = {
-  'home':    '/',
-  'about':   '/about',
-  'tirz':    '/tirzepatide',
-  'reta':    '/retatrutide',
-  'ghkcu':   '/ghk-cu',
-  'kpv':     '/kpv',
-  'gluta':   '/glutathione',
-  'tesa':    '/tesamorelin',
-  'motsc':   '/mots-c',
-  'journey': '/journey',
-};
-
 function showPage(id) {
-  const url = pageRoutes[id] || '/';
-  window.location.href = url;
+  const routes = {home:'/',about:'/about',tirz:'/tirzepatide',reta:'/retatrutide',ghkcu:'/ghk-cu',kpv:'/kpv',gluta:'/glutathione',tesa:'/tesamorelin',motsc:'/mots-c',amino:'/5-amino-1mq',journey:'/journey'};
+  window.location.href = routes[id] || '/';
 }
-
 function toggleMenu() {
   const m = document.getElementById('mobileMenu');
   const h = document.getElementById('hamburger');
@@ -316,13 +298,12 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') e.target.click();
 });
 document.addEventListener('DOMContentLoaded', () => {
-  initFadeIns();
-});
-
-document.addEventListener('DOMContentLoaded', () => {
   updateGradient('ghkcu');
   initFadeIns();
 });
 </script>
+</body>
+</html>
+
 </body>
 </html>

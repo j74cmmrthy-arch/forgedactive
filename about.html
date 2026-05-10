@@ -8,7 +8,7 @@
 <meta property="og:title" content="FORGEDACTIVE"/>
 <meta property="og:description" content="A personal and community-sourced guide to GLP peptide wellness."/>
 <meta property="og:image" content="https://forgedactive.com/og-image.jpg"/>
-<meta property="og:url" content="https://forgedactive.com"/>
+<meta property="og:url" content="https://forgedactive.com/about"/>
 <meta property="og:type" content="website"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://forgedactive.com/og-image.jpg"/>
@@ -48,6 +48,7 @@
         <div class="dropdown-label">Performance Series</div>
         <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
         <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+        <button onclick="window.location.href='/5-amino-1mq'">5-Amino-1MQ</button>
       </div>
     </div>
     <button onclick="window.location.href='/journey'" data-page="journey">Your Journey</button>
@@ -75,6 +76,7 @@
   <div class="mobile-series-children" id="mob-perf">
     <button onclick="window.location.href='/tesamorelin';closeMenu()">Tesamorelin</button>
     <button onclick="window.location.href='/mots-c';closeMenu()">MOTS-c</button>
+    <button onclick="window.location.href='/5-amino-1mq';closeMenu()">5-Amino-1MQ</button>
   </div>
   <button onclick="window.location.href='/journey';closeMenu()">Your Journey</button>
 </div>
@@ -110,14 +112,14 @@
       <div class="panel-block accent">
         <span class="tag tag-pink">Origin</span>
         <h3>Why This Exists</h3>
-        <p>When I started my GLP journey, I found either marketing material or dense academic papers with nothing in between. Forged Active is the middle ground: personal, honest, and grounded in science, with every research claim backed by a full citation.</p>
+        <p>When I started my GLP journey, I found either marketing material or dense academic papers with nothing in between. FORGEDACTIVE is the middle ground: personal, honest, and grounded in science, with every research claim backed by a full citation.</p>
         <br>
-        <p>Some compounds on this site I've used personally. Others come from close friends, family, or the broader wellness community. Every page is clear about which is which.</p>
+        <p>Some compounds on this site I have used personally. Others come from close friends, family, or the broader wellness community. Every page is clear about which is which.</p>
       </div>
       <div class="panel-block">
         <span class="tag tag-purple">The Philosophy</span>
         <h3>Forged, Not Found</h3>
-        <p>Health isn't something you stumble into. It's built deliberately, with the right information and patience. GLP peptides are tools. This site is about understanding those tools as clearly as possible.</p>
+        <p>Health is built deliberately, with the right information and patience. GLP peptides are tools. This site is about understanding those tools as clearly as possible.</p>
         <br>
         <p>"FORGEDACTIVE" reflects that ethos: your health is shaped through intentional choices, not passive luck or marketing promises.</p>
       </div>
@@ -131,7 +133,7 @@
           <div class="step-num" style="color:var(--c1)">01</div>
           <div class="step-content">
             <h4>Honesty Over Hype</h4>
-            <p>The harder weeks, the side effects, the moments of uncertainty — those are part of this too. A complete picture is more useful than a polished one.</p>
+            <p>The harder weeks, the side effects, the moments of uncertainty are part of this too. A complete picture is more useful than a polished one.</p>
           </div>
         </div>
         <div class="step">
@@ -152,7 +154,7 @@
           <div class="step-num" style="color:var(--c5)">04</div>
           <div class="step-content">
             <h4>Ongoing Updates</h4>
-            <p>Peptide research moves fast. As new studies publish or experience accumulates, this site gets updated. It's a living resource.</p>
+            <p>Peptide research moves fast. As new studies publish or experience accumulates, this site gets updated. It is a living resource.</p>
           </div>
         </div>
       </div>
@@ -170,7 +172,9 @@
 
   <div class="disclaimer-bar">FOR INFORMATIONAL PURPOSES ONLY. Content reflects personal and community experience alongside publicly available research. Always consult a licensed healthcare professional before beginning any wellness protocol.</div>
   <div style="height:48px"></div>
+
 </div>
+
 
 <!-- FOOTER -->
 <footer>
@@ -188,6 +192,7 @@
       <button onclick="window.location.href='/glutathione'">Glutathione</button>
       <button onclick="window.location.href='/tesamorelin'">Tesamorelin</button>
       <button onclick="window.location.href='/mots-c'">MOTS-c</button>
+      <button onclick="window.location.href='/5-amino-1mq'">5-Amino-1MQ</button>
       <button onclick="window.location.href='/journey'">Your Journey</button>
     </div>
     <div class="footer-copy">© 2025 FORGEDACTIVE · FOR INFORMATIONAL USE ONLY</div>
@@ -206,6 +211,7 @@ const palettes = {
   tesa:    ['#f472b6','#a78bfa','#fb923c','#e879f9','#c084fc','#f472b6'],
   motsc:   ['#34d399','#60a5fa','#a78bfa','#10b981','#3b82f6','#34d399'],
   journey: ['#f472b6','#a78bfa','#fb923c','#60a5fa','#34d399','#facc15'],
+  amino:   ['#34d399','#facc15','#60a5fa','#10b981','#a78bfa','#34d399'],
 };
 function updateGradient(page) {
   const p = palettes[page] || palettes.home;
@@ -218,7 +224,7 @@ function updateGradient(page) {
   r.style.setProperty('--c6', p[5]);
 }
 function showPage(id) {
-  const routes = {home:'/',about:'/about',tirz:'/tirzepatide',reta:'/retatrutide',ghkcu:'/ghk-cu',kpv:'/kpv',gluta:'/glutathione',tesa:'/tesamorelin',motsc:'/mots-c',journey:'/journey'};
+  const routes = {home:'/',about:'/about',tirz:'/tirzepatide',reta:'/retatrutide',ghkcu:'/ghk-cu',kpv:'/kpv',gluta:'/glutathione',tesa:'/tesamorelin',motsc:'/mots-c',amino:'/5-amino-1mq',journey:'/journey'};
   window.location.href = routes[id] || '/';
 }
 function toggleMenu() {
@@ -263,5 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFadeIns();
 });
 </script>
+</body>
+</html>
+
 </body>
 </html>
